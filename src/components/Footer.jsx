@@ -1,0 +1,73 @@
+import React from 'react'
+
+const Footer = () => {
+  return (
+    <footer>
+    <div id="footer">
+      <div className="shop-links">
+        <p className="info-title">Online Shopping</p>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">Kids</a>
+        <a href="#">Home & Living</a>
+        <a href="#">Beauty</a>
+        <a href="#">Gift Cards</a>
+        <a href="#">Myntra Insider</a>
+        <p className="info-title">Useful Links</p>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+        <a href="#">Site Map</a>
+        <a href="#">Corporate Information</a>
+        <a href="#">Whitehat</a>
+        <a href="#">Cleartrip</a>
+      </div>
+      <div className="customer-policies">
+        <p className="info-title">Customer Policies</p>
+        <a href="#">Contact Us</a>
+        <a href="#">FAQ</a>
+        <a href="#">T&C</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Track Orders</a>
+        <a href="#">Shipping</a>
+        <a href="#">Cancellation</a>
+        <a href="#">Returns</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Grievance Redressal</a>
+      </div>
+      <div className="app-download">
+        <p className="info-title">Experience myntra app on mobile</p>
+        <div className="download">
+          <div>
+            <img src="images/google-play-store.webp" alt="" />
+          </div>
+          <div>
+            <img src="images/app-store.png" alt="" />
+          </div>
+        </div>
+        <p className="info-title">Keep in touch</p>
+        <div className="socials">
+          <a href="#"><i className="fa-brands fa-square-facebook social"></i></a>
+          <a href="#"><i className="fa-brands fa-twitter social"></i></a>
+          <a href="#"><i className="fa-brands fa-youtube social"></i></a>
+          <a href="#"><i className="fa-brands fa-square-instagram social"></i></a>
+        </div>
+      </div>
+      <div className="myntra-promises">
+        <div className="myntra-promise">
+          <img src="/images/myntra-original.png" alt="" />
+          <div><b>100% Original</b> guarantee for all products at myntra.com</div>
+        </div>
+        <div className="myntra-promise">
+          <img src="/images/myntra-return.png" alt="" />
+          <div><strong>Return Within 14 days</strong> of reciving your order</div>
+        </div>
+      </div>
+    </div>
+    <div className="copyright">
+      <p>&copy; 2025 www.myntra.com. All rights revserved.</p>
+    </div>
+  </footer>
+  );
+}
+
+export default Footer
