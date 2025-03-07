@@ -1,24 +1,26 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const ItemContainer = ({item}) => {
+const ItemContainer = ({ item }) => {
 
   const navigate = useNavigate();
-  const handleItemClick = (itemId)=> {
+  const handleItemClick = (itemId) => {
     navigate(`item/${itemId}`)
   }
 
   return (
   <div className="item-container" onClick={() => handleItemClick(item.id)}>
-    <img className="item-image" src={item.src} alt="" />
-    <div className="item-rating">
-      {item.rating.stars} <i className="fa-solid fa-star review-star-icon"></i>  |  {item.rating.noOfReviews}
-    </div>
-    <div className="item-actions">
-      <span className="item-wishlist">
-        <span className="material-symbols-outlined item-wishlist-icon">
-          favorite
-        </span>
+      <div className='relative'>
+        <img className="item-image" src={item.src} alt="" />
+        <div className="item-rating">
+          {item.rating.stars} <i className="fa-solid fa-star review-star-icon"></i>  |  {item.rating.noOfReviews}
+        </div>
+      </div>
+      <div className="item-actions">
+        <span className="item-wishlist">
+          <span className="material-symbols-outlined item-wishlist-icon">
+            favorite
+          </span>
           <span>Wishlist</span>
         </span>
       </div>
@@ -26,7 +28,7 @@ const ItemContainer = ({item}) => {
         <div className="item-brand">{item.brand}</div>
         <div className="item-name">{item.name}</div>
         <div className="item-price">
-          <span className="discounted-price">Rs. {item.discounted_price}</span>
+          <span className="discounted-price">&#8377; {item.discounted_price}</span>
           <span className="original-price">Rs. {item.original_price}</span>
           <span className="discount">({item.discount}% OFF)</span>
         </div>

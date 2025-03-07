@@ -110,7 +110,6 @@ header {
   color: #fff;
   background-color: #ff3e6c;
   font-weight: 600;
-  display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -297,8 +296,8 @@ main {
 
 .item-rating {
   position: absolute;
-  bottom: 72px;
-  left: 10px;
+  bottom: 7px;
+  left: 7px;
   background: white;
   display: inline-block;
   padding: 0px 5px;
@@ -323,7 +322,8 @@ main {
   width: 100%;
   position: absolute;
   z-index: 3;
-  bottom: 40px;
+  /* bottom: 40px; */
+  top: 234px;
   padding: 12px 10px;
   box-sizing: border-box;
   justify-content: center;

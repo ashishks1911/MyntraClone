@@ -1,12 +1,52 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const ItemInfo = ({ item }) => {
 
+  const [size, setSize] = useState('');
+
+  // const handleSelectSize = (size)=>{
+  //   console.log(size);
+  //   setSize(size)
+  // }
+
+  useEffect(() => {
+    if (size.length != 0) {
+      document.querySelector('.seller-info').classList.remove('hidden');
+    }
+    console.log(size);
+    setSize(size)
+
+  }, [size]);
 
   let bagItems = [];
-  const addToBag = (item) => {
-    bagItems.push(item);
+
+  useEffect(() => {
+    let bag = document.querySelector('.bag-item-count');
+    if(bagItems.length === 0){
+      console.log('hi');
+      bag.classList.add('hidden');
+      bag.classList.remove('flex');
+    }
+    else{
+      console.log('hello');
+      bag.classList.remove('hidden');
+      bag.classList.add('flex');
+      bag.innerHTML = bagItems.length;
+    }
+    console.log(bagItems);
+  }, [bagItems]);
+
+
+  const addToBag = (itemId) => {
+    let obj = { itemId, size };
+    console.log(obj);
+    if (size.length == 0) {
+      document.querySelector('.size-error-message').classList.remove('hidden');
+    } else {
+      bagItems.push(obj);
+    }
+    console.log("hi" + bagItems.length)
   }
 
 
@@ -26,8 +66,8 @@ const ItemInfo = ({ item }) => {
         </div>
       </div>
       <div className="item-details-price">
-        <span className="item-details-discounted-price">Rs. {item.discounted_price}</span>
-        <span className="item-details-original-price">MRP {item.original_price}</span>
+        <span className="item-details-discounted-price">&#8377;{item.discounted_price}</span>
+        <span className="item-details-original-price">MRP &#8377;{item.original_price}</span>
         <span className="item-details-discount">({item.discount}% OFF)</span>
       </div>
       <div>
@@ -36,7 +76,7 @@ const ItemInfo = ({ item }) => {
       <div>
         <div className="colors-container">
           <div>
-            <h4 className="colors-heading">More Colors</h4>
+            <h4 className="colors-heading font-bold">More Colors</h4>
             <div className='flex'>
               {
                 item.colors.map((color) =>
@@ -49,24 +89,27 @@ const ItemInfo = ({ item }) => {
         </div>
         <div className="size-buttons-container">
           <div className="size-buttons-header">
-            <h4 className="size-buttons-size">Select Size</h4>
+            <h4 className="size-buttons-size font-bold">Select Size</h4>
             <span className="size-buttons-chart">
-              <button className="size-buttons-show-chart">Size chart</button>
+              <button className="size-buttons-show-chart font-bold">Size chart</button>
               <span className="size-buttons-arrow"></span>
             </span>
+          </div>
+          <div className='size-error-message mt-5 hidden'>
+            <span className='text-red-500'>Please Select a size</span>
           </div>
           <div className="size-buttons-size-buttons">
             {
               item.sizes.map((size) =>
                 <div className="size-buttons-btn-container">
-                  <span>{size}</span>
+                  <button key={size} className='hover:border-red-500 focus:text-red-500 focus:border-red-500' onClick={() => setSize(size)}>{size}</button>
                 </div>
               )
             }
           </div>
         </div>
         <div className="bag-wishlist-btn-container">
-          <button type="button" className="bag-btn-container" onClick={addToBag(item)}>
+          <button type="button" className="bag-btn-container" onClick={() => addToBag(item.id)}>
             <span className="material-symbols-outlined">
               shopping_bag
             </span>
@@ -78,6 +121,18 @@ const ItemInfo = ({ item }) => {
             </span>
             <span className="wishlist-btn-title">Wishlist</span>
           </button>
+        </div>
+        <div className='seller-info p-3 mt-5 hidden'>
+          <hr className='py-1' />
+          <div>
+            <span className="font-bold mr-2">&#8377;{item.discounted_price}</span>
+            <span className="ine-through mr-2">MRP &#8377;{item.original_price}</span>
+            <span className="text-red-500">({item.discount}% OFF)</span>
+          </div>
+          <div className='pb-3'>
+            Seller : <span className='font-bold text-red-500'>{item.company}</span>
+          </div>
+          <hr className='py-3' />
         </div>
       </div>
     </div>
