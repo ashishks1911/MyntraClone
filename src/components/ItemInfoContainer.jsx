@@ -17,9 +17,9 @@ const ItemInfo = ({ item }) => {
     if (size.length == 0) {
       document.querySelector('.size-error-message').classList.remove('hidden');
     } else {
-      let item = bagItems.find((item) => item.id == itemId);
-      if (item != null && item.size == size) {
-        console.log('You have this item in your bag and we have increased the quantity by 1')
+      let item = bagItems.filter((item) => item.id == itemId && item.size === size);
+      if (item.length != 0) {
+        console.log('You have this item in your bag and we have increased the quantity by 1' + item)
         setBagItems((bagItems) => bagItems.map((item) => item.id === itemId && item.size === size ? { ...item, qty: item.qty + 1 } : item));
         return;
       }
