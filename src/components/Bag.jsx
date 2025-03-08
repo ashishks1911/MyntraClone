@@ -1,7 +1,9 @@
 import React from "react";
 import BagItem from "./BagItem";
+import { useOutletContext } from "react-router-dom";
 
 const Bag = () => {
+  const { bagItems } = useOutletContext();
   let offerMeassages = [
     '10% Instant Discount on Kotak Bank Credit and Debit Cards and Credit Card EMI on a min spend of ₹3,500. TCA',
     '10% Instant Discount on Kotak Credit and Debit Cards on a min spend of ₹5,000. TCA',
@@ -34,8 +36,8 @@ const Bag = () => {
   ];
   return (
     <div className="bag-container p-3 mt-12">
-      <div className="bag-left-block pt-10 p-4">
-        <div className="flex p-3 py-4 items-center justify-between border rounded bg-[#fff6f4] text-sm text-bold">
+      <div className="bag-left-block pt-10 p-5">
+        <div className="flex px-4 py-4 items-center justify-between border rounded bg-[#fff6f4] text-sm text-bold">
           <h2 className="font-bold">Check Delivery Time & Services</h2>
           <button className="text-red-500 border border-red-500 rounded px-5 py-2 text-center text-xs font-bold uppercase">
             Enter pin code
@@ -63,18 +65,32 @@ const Bag = () => {
               on a min spend of ₹3,500. TCA
             </li>
           </div>
-          <div className="show-more-offers px-7 flex items-center">
+          <div className="show-more-offers px-7 flex items-center cursor-pointer">
             <span className="text-red-500 text-sm" >Show More</span>
             <div style={{ color: "ff3e6c" }} className="pl-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" class="offersV2-base-arrowIcon" style={{ transform: "rotate(90deg)", color: "#ff3e6c" }}><path fill-rule="evenodd" d="M6.797 5.529a.824.824 0 0 0-.042-.036L1.19.193a.724.724 0 0 0-.986 0 .643.643 0 0 0 0 .94L5.316 6 .203 10.868a.643.643 0 0 0 0 .938.724.724 0 0 0 .986 0l5.566-5.299a.644.644 0 0 0 .041-.978"></path></svg>
             </div>
           </div>
         </div>
-        <div className="bulk-action">
-          <input type="checkbox" name="item" id="item" />
-
+        <div className="bulk-action flex justify-between p-5 items-center">
+          <div className="flex items-center">
+            <input type="checkbox" name="item" id="item" className="w-4 h-4"/>
+            <span className="uppercase font-bold text-md px-2">2/2 Items selected</span>
+          </div>
+          <div>
+            <button className="uppercase px-6 font-bold text-xs text-gray-500 border-r-2">Remove</button>
+            <button className="uppercase px-6 font-bold text-xs text-gray-500">Move to wishlist</button>
+          </div>
         </div>
-        <BagItem />
+        <div>
+          {
+            bagItems.map((bagItem) =>
+              <div className="my-3">
+                <BagItem bagItem={bagItem} />
+              </div>
+            )
+          }
+        </div>
       </div>
       <div className="bag-right-block border-l p-4">
         <div className="coupons">
