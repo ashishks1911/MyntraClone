@@ -6,34 +6,29 @@ const ItemInfo = ({ item }) => {
   const [size, setSize] = useState('');
   const { bagItems, setBagItems } = useOutletContext();
 
-  const handleSelectSize = (size) => {
-    console.log(size);
-    setSize(size);
-  }
-
   useEffect(() => {
     if (size.length != 0) {
       document.querySelector('.seller-info').classList.remove('hidden');
     }
-    console.log(size);
-    // setSize(size)
-
   }, [size]);
 
   const addToBag = (itemId) => {
+    const qty = 1;
     if (size.length == 0) {
       document.querySelector('.size-error-message').classList.remove('hidden');
     } else {
-      let item = bagItems.find((item) => item.itemId == itemId);
-      console.log(item);
-      if (item == null) {
-        const items = [...bagItems, { itemId, size }];
-        setBagItems(items);
+      let item = bagItems.find((item) => item.id == itemId);
+      if (item != null && item.size == size) {
+        console.log('You have this item in your bag and we have increased the quantity by 1')
+        setBagItems((bagItems) => bagItems.map((item) => item.id === itemId && item.size === size ? { ...item, qty: item.qty + 1 } : item));
+        return;
+      }
+      else {
+        setBagItems((bagItems) => [...bagItems, { id: itemId, size, qty }]);
       }
     }
     console.log(bagItems)
   }
-
 
   return (
     <div className="item-details-description-container">
@@ -86,10 +81,11 @@ const ItemInfo = ({ item }) => {
           <div className="size-buttons-size-buttons">
             {
               item.sizes.map((size) =>
-                <div className="size-buttons-btn-container">
-                  <button key={size} className='hover:border-red-500 focus:text-red-500 focus:border-red-500' onClick={() => handleSelectSize(size)}>{size}</button>
+                <div className="size-buttons-btn-container ">
+                  <button key={size} className='w-full h-full border border-gray-400 hover:border-red-500 focus:text-red-500 focus:border-red-500 rounded-full' onClick={() => setSize(size)}>{size}</button>
                 </div>
               )
+
             }
           </div>
         </div>
