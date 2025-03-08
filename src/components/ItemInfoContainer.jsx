@@ -1,52 +1,37 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useOutletContext } from 'react-router-dom'
 
 const ItemInfo = ({ item }) => {
 
   const [size, setSize] = useState('');
+  const { bagItems, setBagItems } = useOutletContext();
 
-  // const handleSelectSize = (size)=>{
-  //   console.log(size);
-  //   setSize(size)
-  // }
+  const handleSelectSize = (size) => {
+    console.log(size);
+    setSize(size);
+  }
 
   useEffect(() => {
     if (size.length != 0) {
       document.querySelector('.seller-info').classList.remove('hidden');
     }
     console.log(size);
-    setSize(size)
+    // setSize(size)
 
   }, [size]);
 
-  let bagItems = [];
-
-  useEffect(() => {
-    let bag = document.querySelector('.bag-item-count');
-    if(bagItems.length === 0){
-      console.log('hi');
-      bag.classList.add('hidden');
-      bag.classList.remove('flex');
-    }
-    else{
-      console.log('hello');
-      bag.classList.remove('hidden');
-      bag.classList.add('flex');
-      bag.innerHTML = bagItems.length;
-    }
-    console.log(bagItems);
-  }, [bagItems]);
-
-
   const addToBag = (itemId) => {
-    let obj = { itemId, size };
-    console.log(obj);
     if (size.length == 0) {
       document.querySelector('.size-error-message').classList.remove('hidden');
     } else {
-      bagItems.push(obj);
+      let item = bagItems.find((item) => item.itemId == itemId);
+      console.log(item);
+      if (item == null) {
+        const items = [...bagItems, { itemId, size }];
+        setBagItems(items);
+      }
     }
-    console.log("hi" + bagItems.length)
+    console.log(bagItems)
   }
 
 
@@ -102,7 +87,7 @@ const ItemInfo = ({ item }) => {
             {
               item.sizes.map((size) =>
                 <div className="size-buttons-btn-container">
-                  <button key={size} className='hover:border-red-500 focus:text-red-500 focus:border-red-500' onClick={() => setSize(size)}>{size}</button>
+                  <button key={size} className='hover:border-red-500 focus:text-red-500 focus:border-red-500' onClick={() => handleSelectSize(size)}>{size}</button>
                 </div>
               )
             }
