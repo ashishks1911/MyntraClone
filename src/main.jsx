@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './routes/Home.jsx'
 import ItemDetails from './components/ItemDetails.jsx'
 import Bag from './components/Bag.jsx'
+import WishList from './components/WishList.jsx'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,9 @@ const router = createBrowserRouter([
       },
       {
         path: 'checkout/bag', element: <Bag />
+      },
+      {
+        path: 'wishlist', element: <WishList />
       }
     ]
   },

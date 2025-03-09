@@ -32,7 +32,7 @@ const Header = () => {
           <IoPersonOutline />
           <span>Profile</span>
         </Link>
-        <Link className="action-container" to={'/'}>
+        <Link className="action-container" to={'/wishlist'}>
           <FaRegHeart />
           <span>Wishlist</span>
         </Link>

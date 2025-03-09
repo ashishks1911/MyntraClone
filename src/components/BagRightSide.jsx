@@ -102,7 +102,7 @@ const BagRightSide = ({ bagItems }) => {
             <div className='text-sm font-normal pt-1 text-green-500'>- &#8377;{discountOnMRP}</div>
             <div className='text-sm pt-1'><button className='text-red-500'>Apply Coupon</button></div>
             <div className='text-sm font-normal pt-1'>&#8377;{platformFee}</div>
-            <div className='text-sm font-normal pt-1 text-green-500'>{shippingFee == 0 ? 'FREE' : `'&#8377;'${shippingFee}`}</div>
+            <div className='text-sm font-normal pt-1 text-green-500'>{shippingFee == 0 ? 'FREE' : `₹${shippingFee}`}</div>
           </div>
         </div>
         <hr className='mt-2' />

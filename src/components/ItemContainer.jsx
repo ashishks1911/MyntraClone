@@ -9,7 +9,7 @@ const ItemContainer = ({ item }) => {
   }
 
   return (
-  <div className="item-container" onClick={() => handleItemClick(item.id)}>
+    <div className="item-container" onClick={() => handleItemClick(item.id)}>
       <div className='relative'>
         <img className="item-image" src={item.src} alt="" />
         <div className="item-rating">
@@ -28,9 +28,9 @@ const ItemContainer = ({ item }) => {
         <div className="item-brand">{item.brand}</div>
         <div className="item-name">{item.name}</div>
         <div className="item-price">
-          <span className="discounted-price">&#8377; {item.discounted_price}</span>
+          <span className="discounted-price">₹ {item.discounted_price}</span>
           <span className="original-price">Rs. {item.original_price}</span>
-          <span className="discount">({item.discount}% OFF)</span>
+          <span className="discount">({item.discount_percentage == 0 ? `₹${item.discount_mrp}` : `${item.discount_percentage} % FF`})</span>
         </div>
       </div>
     </div>

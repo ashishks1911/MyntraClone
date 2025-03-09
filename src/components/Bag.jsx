@@ -3,9 +3,15 @@ import { useOutletContext } from "react-router-dom";
 import BagRightSide from "./BagRightSide";
 import BagOffers from "./BagOffers";
 import BagItem from "./BagItem";
+import EmptyBag from "./EmptyBag";
 
 const Bag = () => {
   const { bagItems } = useOutletContext();
+
+  if(bagItems.length==0){
+    return <EmptyBag/>
+  }
+  
   return (
     <div className="bag-container p-3 mt-12">
       <div className="bag-left-block pt-10 p-5">
