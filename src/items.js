@@ -13,7 +13,8 @@ let items = [
     sizes: ['S', 'M', 'L', 'XL', 'XXL', '3XL'],
     discounted_price: 599,
     original_price: 1999,
-    discount: 70
+    discount_percentage: 70,
+    discount_mrp:0
   },
 
   {
@@ -48,7 +49,8 @@ let items = [
     sizes: ['S', 'M', 'L', 'XL', 'XXL', '3XL'],
     discounted_price: 882,
     original_price: 4345,
-    discount: 45
+    discount_percentage: 0,
+    discount_mrp:3463
     // Rs 3463 OFF
   },
   {
@@ -82,7 +84,8 @@ let items = [
     ],
     discounted_price: 879,
     original_price: 4345,
-    discount: 66
+    discount_percentage: 0,
+    discount_mrp:3466
     // Rs 3466 OFF
   },
   {
@@ -99,7 +102,8 @@ let items = [
     sizes: ['S', 'M', 'L', 'XL', 'XXL', '3XL'],
     discounted_price: 867,
     original_price: 4345,
-    discount: 45
+    discount_percentage: 0,
+    discount_mrp:3478
     //Rs 3478 OFF
   },
 
@@ -117,7 +121,8 @@ let items = [
     sizes: ['S', 'M', 'L', 'XL'],
     discounted_price: 699,
     original_price: 1499,
-    discount: 23
+    discount_percentage: 0,
+    discount_mrp:800
     //Rs 800 OFF
   },
   {
@@ -151,7 +156,8 @@ let items = [
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 897,
     original_price: 4345,
-    discount: 23
+    discount_percentage: 0,
+    discount_mrp:3448
     //Rs 3448 OFF
   },
   {
@@ -185,7 +191,8 @@ let items = [
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 897,
     original_price: 4345,
-    discount: 23
+    discount_percentage: 0,
+    discount_mrp:3448
     //Rs 3448 OFF
   },
   {
@@ -219,7 +226,8 @@ let items = [
     sizes: ['4XL', '3XL', '5XL', 'S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 897,
     original_price: 4345,
-    discount: 23
+    discount_percentage: 0,
+    discount_mrp:3448
     //Rs 3448 OFF
   }
 ]

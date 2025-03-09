@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import items from '../item';
+import items from '../items'
 import BreadCrumb from './BreadCrumb';
 import ImageContainer from './ImageContainer';
 import ItemInfo from './ItemInfoContainer';

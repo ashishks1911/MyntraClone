@@ -11,12 +11,12 @@ const Header = () => {
         <Link to="/" ><img className="logo" src="/images/myntra.svg" alt="myntra logo" /></Link>
       </div>
       <nav className="nav-bar">
-        <a href="#">men</a>
-        <a href="#">women</a>
-        <a href="#">kids</a>
-        <a href="#">home & living</a>
-        <a href="#">beauty</a>
-        <a href="#">studio <sup>new</sup></a>
+        <Link to="/" >men</Link>
+        <Link to="/" >women</Link>
+        <Link to="/" >kids</Link>
+        <Link to="/" >home & living</Link>
+        <Link to="/" >beauty</Link>
+        <Link to="/" >studio <sup>new</sup></Link>
       </nav>
       <div className="search-bar">
         <span className="material-symbols-outlined search-icon">

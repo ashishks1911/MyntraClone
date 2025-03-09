@@ -19,7 +19,7 @@ const ItemInfo = ({ item }) => {
     } else {
       let item = bagItems.filter((item) => item.id == itemId && item.size === size);
       if (item.length != 0) {
-        console.log('You have this item in your bag and we have increased the quantity by 1' + item)
+        console.log('You have this item in your bag and we have increased the quantity by 1')
         setBagItems((bagItems) => bagItems.map((item) => item.id === itemId && item.size === size ? { ...item, qty: item.qty + 1 } : item));
         return;
       }
@@ -48,7 +48,8 @@ const ItemInfo = ({ item }) => {
       <div className="item-details-price">
         <span className="item-details-discounted-price">&#8377;{item.discounted_price}</span>
         <span className="item-details-original-price">MRP &#8377;{item.original_price}</span>
-        <span className="item-details-discount">({item.discount}% OFF)</span>
+        <span className="item-details-discount">({item.discount_percentage!=0? `${item.discount_percentage} %`:
+    item.discount_mrp} OFF)</span>
       </div>
       <div>
         <span className="item-vatinfo">Inclusive of all taxes</span>

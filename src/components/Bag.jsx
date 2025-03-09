@@ -36,7 +36,7 @@ const Bag = () => {
         }
       </div>
     </div>
-      <BagRightSide/>
+      <BagRightSide bagItems= {bagItems}/>
     </div>
   );
 };
