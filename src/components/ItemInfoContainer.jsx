@@ -35,21 +35,25 @@ const ItemInfo = ({ item }) => {
       <h1 className="item-details-brand">{item.brand}</h1>
       <h1 className="item-details-name">{item.name}</h1>
       <div className="item-details-rating-container">
-        <div className="item-details-rating">
-          <div className="item-overall-rating">
-            {item.rating.stars} <i className="fa-solid fa-star review-star-icon"></i>
+        {
+
+          item.rating != null &&
+          <div className="item-details-rating">
+            <div className="item-overall-rating">
+              {item.rating.stars} <i className="fa-solid fa-star review-star-icon"></i>
+            </div>
+            <span> | </span>
+            <div className="item-rating-count">
+              {item.rating.noOfReviews} Ratings
+            </div>
           </div>
-          <span> | </span>
-          <div className="item-rating-count">
-            {item.rating.noOfReviews} Ratings
-          </div>
-        </div>
+        }
       </div>
       <div className="item-details-price">
         <span className="item-details-discounted-price">&#8377;{item.discounted_price}</span>
         <span className="item-details-original-price">MRP &#8377;{item.original_price}</span>
-        <span className="item-details-discount">({item.discount_percentage!=0? `${item.discount_percentage} %`:
-    item.discount_mrp} OFF)</span>
+        <span className="item-details-discount">({item.discount_percentage != 0 ? `${item.discount_percentage} %` :
+          item.discount_mrp} OFF)</span>
       </div>
       <div>
         <span className="item-vatinfo">Inclusive of all taxes</span>

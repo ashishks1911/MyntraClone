@@ -8,6 +8,7 @@ let items = [
       noOfReviews: 114
     },
     brand: 'Clora Creation',
+    category: 'women',
     name: 'Solid Woollen Legging',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL', 'XXL', '3XL'],
@@ -28,6 +29,7 @@ let items = [
     brand: 'GoSriKi',
     company: 'GOSRIKI FASHION PRIVATE LIMITED',
     name: 'Women Kurta Set',
+    category: 'women',
     colors: [
       {
         id: '008',
@@ -62,6 +64,7 @@ let items = [
       noOfReviews: 2000
     },
     brand: 'GoSriKi',
+    category: 'women',
     name: 'Women Kurta Set',
     sizes: ['S', 'M', 'L', 'XL', 'XXL', '4XL', '3XL', '5XL'],
     colors: [
@@ -98,6 +101,7 @@ let items = [
     },
     brand: 'GoSriKi',
     name: 'Printed Straight Kurta Set',
+    category: 'women',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL', 'XXL', '3XL'],
     discounted_price: 867,
@@ -117,6 +121,7 @@ let items = [
     },
     brand: 'Libas',
     name: 'Embroidered Kurta',
+    category: 'women',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL'],
     discounted_price: 699,
@@ -135,6 +140,7 @@ let items = [
     },
     brand: 'GoSriki',
     name: 'Women printed Regular Kurta Set with dupatta',
+    category: 'women',
     colors: [
       {
         id: '008',
@@ -170,6 +176,7 @@ let items = [
     },
     brand: 'GoSriki',
     name: 'Women Regular Kurta with Palazzos & With dupatta',
+    category: 'women',
     colors: [
       {
         id: '008',
@@ -205,6 +212,7 @@ let items = [
     },
     brand: 'GoSriki',
     name: 'Women Regular Kurta with Trouser & Dupatta Set',
+    category: 'women',
     colors: [
       {
         id: '002',
@@ -240,6 +248,7 @@ let items = [
     },
     brand: 'Ajile by Pantaloons',
     name: 'Round Neck Lounge T-shirt',
+    category: 'men',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 399,
@@ -258,6 +267,7 @@ let items = [
     },
     brand: 'DAMENSCH',
     name: 'Ultralight Basic Crew Pure Cotton Lounge T-shirts',
+    category: 'men',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 479,
@@ -276,6 +286,7 @@ let items = [
     },
     brand: 'U.S Polo Assn.',
     name: 'Men Grey Melange & Black Striped Comfort-Fit Lounge T-Shirt',
+    category: 'men',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 559,
@@ -294,6 +305,7 @@ let items = [
     },
     brand: 'MASCLN SASSAFRAS',
     name: 'Unisex Printed Applique T-shirt',
+    category: 'men',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 599,
@@ -312,6 +324,7 @@ let items = [
     },
     brand: 'Campus Sutra',
     name: 'Classic Buffalo Checked Casual Shirt',
+    category: 'men',
     colors: [
       {
         id: '014',
@@ -335,6 +348,7 @@ let items = [
     },
     brand: 'Campus Sutra',
     name: 'Men Classic Buffalo Checked Cotton Casual Shirt',
+    category: 'men',
     colors: [
       {
         id: '013',
@@ -350,13 +364,14 @@ let items = [
   {
     id: '015',
     src: '/products/men/7.png',
-    img: ['/products/men/7.png', '/products/men/72.png','/products/men/73.png'],
+    img: ['/products/men/7.png', '/products/men/72.png', '/products/men/73.png'],
     rating: {
       stars: 4.1,
       noOfReviews: 6000
     },
     brand: 'Roadster',
     name: 'Men Navy Blue & Grey Checked Casual Shirt',
+    category: 'men',
     colors: [],
     sizes: ['38', '40', '42', '44'],
     discounted_price: 559,
@@ -374,11 +389,67 @@ let items = [
     },
     brand: 'Anouk',
     name: 'Men Geometric Printed Cotton Indigo Kurta',
+    category: 'men',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 725,
     original_price: 2199,
     discount_percentage: 67,
+    discount_mrp: 0
+  },
+
+  // Kids Category 
+  {
+    id: '017',
+    src: '/products/kids/1.png',
+    img: ['/products/kids/1.png', '/products/kids/12.png', '/products/kids/13.png', '/products/kids/14.png'],
+    rating: {
+      stars: 4,
+      noOfReviews: 1200
+    },
+    brand: 'HELLCAT',
+    name: 'Boys Pack Of 3 Printed Cotton T-shirt',
+    category: 'kids',
+    colors: [],
+    sizes: ['3-4Y', '5-6Y', '7-8Y', '9-10Y', '11-12Y', '13-14Y', '15-16Y'],
+    discounted_price: 389,
+    original_price: 3897,
+    discount_percentage: 90,
+    discount_mrp: 0
+  },
+  {
+    id: '018',
+    src: '/products/kids/2.png',
+    img: ['/products/kids/2.png', '/products/kids/22.png'],
+    //no rating case
+
+    brand: 'itsmycostume',
+    name: 'Unisex Kids Holi tshirts',
+    category: 'kids',
+    colors: [],
+    sizes: ['1-2Y', '2-3Y', '3-4Y', '4-5Y', '5-6Y', '7-8Y'],
+    discounted_price: 379,
+    original_price: 1999,
+    discount_percentage: 81,
+    discount_mrp: 0
+  }
+  ,
+  {
+    id: '019',
+    src: '/products/kids/3.png',
+    img: ['/products/kids/3.png', '/products/kids/32.png'],
+    rating: {
+      stars: 4.2,
+      noOfReviews: 234
+    },
+    brand: 'Minicult',
+    name: 'Kids Pack of 2 Mickey Mouse Printed Cotton T-shirt',
+    category: 'kids',
+    colors: [],
+    sizes: ['18-24M', '2-3Y', '3-4Y', '5-6Y', '7-8Y', '9-10Y', '11-12Y', '13-14Y', '15-16Y'],
+    discounted_price: 379,
+    original_price: 1999,
+    discount_percentage: 81,
     discount_mrp: 0
   }
 

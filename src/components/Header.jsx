@@ -11,9 +11,9 @@ const Header = () => {
         <Link to="/" ><img className="logo" src="/myntra.svg" alt="myntra logo" /></Link>
       </div>
       <nav className="nav-bar">
-        <Link to="/" >men</Link>
-        <Link to="/" >women</Link>
-        <Link to="/" >kids</Link>
+        <Link to="/category/men" >men</Link>
+        <Link to="/category/women" >women</Link>
+        <Link to="/category/kids" >kids</Link>
         <Link to="/" >home & living</Link>
         <Link to="/" >beauty</Link>
         <Link to="/" >studio <sup>new</sup></Link>

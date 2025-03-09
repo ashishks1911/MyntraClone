@@ -5,16 +5,19 @@ const ItemContainer = ({ item }) => {
 
   const navigate = useNavigate();
   const handleItemClick = (itemId) => {
-    navigate(`item/${itemId}`)
+    navigate(`/category/${item.category}/item/${itemId}`)
   }
 
   return (
     <div className="item-container" onClick={() => handleItemClick(item.id)}>
       <div className='relative'>
         <img className="item-image" src={item.src} alt="" />
-        <div className="item-rating">
-          {item.rating.stars} <i className="fa-solid fa-star review-star-icon"></i>  |  {item.rating.noOfReviews}
-        </div>
+        {
+          item.rating != null && <div className="item-rating">
+            {item.rating.stars} <i className="fa-solid fa-star review-star-icon"></i>  |  {item.rating.noOfReviews}
+          </div>
+        }
+
       </div>
       <div className="item-actions">
         <span className="item-wishlist">
