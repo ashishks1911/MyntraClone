@@ -5,7 +5,7 @@ const EmptyBag = () => {
     <div className='w-full text-center mt-32'>
       <div className='flex justify-center pt-12'>
         <div className='w-32'>
-          <img src="/images/empty-bag.webp" alt="empty bag"/>
+          <img src="/empty-bag.webp" alt="empty bag"/>
         </div>
       </div>
       <h1 className='uppercase text-xl font-bold pt-12'> Hey, it feels so light! </h1>

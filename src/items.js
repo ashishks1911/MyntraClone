@@ -1,8 +1,8 @@
 let items = [
   {
     id: '001',
-    src: '/images/products/1.jpg',
-    img: ['/images/products/1.jpg', '/images/products/12.png'],
+    src: '/products/women/1.jpg',
+    img: ['/products/women/1.jpg', '/products/women/12.png'],
     rating: {
       stars: 3.9,
       noOfReviews: 114
@@ -14,49 +14,49 @@ let items = [
     discounted_price: 599,
     original_price: 1999,
     discount_percentage: 70,
-    discount_mrp:0
+    discount_mrp: 0
   },
 
   {
     id: '002',
-    src: '/images/products/2.jpg',
-    img: ['/images/products/2.jpg', '/images/products/22.jpg', '/images/products/23.jpg', '/images/products/24.jpg', '/images/products/25.jpg'],
+    src: '/products/women/2.jpg',
+    img: ['/products/women/2.jpg', '/products/women/22.jpg', '/products/women/23.jpg', '/products/women/24.jpg', '/products/women/25.jpg'],
     rating: {
       stars: 3.7,
       noOfReviews: 118
     },
     brand: 'GoSriKi',
-    company:'GOSRIKI FASHION PRIVATE LIMITED',
+    company: 'GOSRIKI FASHION PRIVATE LIMITED',
     name: 'Women Kurta Set',
     colors: [
       {
         id: '008',
-        img: '/images/products/colors/1color1.jpg'
+        img: '/products/women/colors/1color1.jpg'
       },
       {
         id: '003',
-        img: '/images/products/colors/1color3.jpg'
+        img: '/products/women/colors/1color3.jpg'
       },
       {
         id: '007',
-        img: '/images/products/colors/1color4.jpg'
+        img: '/products/women/colors/1color4.jpg'
       },
       {
         id: '006',
-        img: '/images/products/colors/1color6.jpg'
+        img: '/products/women/colors/1color6.jpg'
       },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL', '3XL'],
     discounted_price: 882,
     original_price: 4345,
     discount_percentage: 0,
-    discount_mrp:3463
+    discount_mrp: 3463
     // Rs 3463 OFF
   },
   {
     id: '003',
-    src: '/images/products/3.jpg',
-    img: ['/images/products/3.jpg', '/images/products/32.jpg', '/images/products/33.jpg', '/images/products/34.jpg', '/images/products/35.jpg', '/images/products/36.jpg'],
+    src: '/products/women/3.jpg',
+    img: ['/products/women/3.jpg', '/products/women/32.jpg', '/products/women/33.jpg', '/products/women/34.jpg', '/products/women/35.jpg', '/products/women/36.jpg'],
     rating: {
       stars: 3.6,
       noOfReviews: 2000
@@ -67,31 +67,31 @@ let items = [
     colors: [
       {
         id: '008',
-        img: '/images/products/colors/1color1.jpg'
+        img: '/products/women/colors/1color1.jpg'
       },
       {
         id: '002',
-        img: '/images/products/colors/1color2.jpg'
+        img: '/products/women/colors/1color2.jpg'
       },
       {
         id: '007',
-        img: '/images/products/colors/1color4.jpg'
+        img: '/products/women/colors/1color4.jpg'
       },
       {
         id: '006',
-        img: '/images/products/colors/1color6.jpg'
+        img: '/products/women/colors/1color6.jpg'
       }
     ],
     discounted_price: 879,
     original_price: 4345,
     discount_percentage: 0,
-    discount_mrp:3466
+    discount_mrp: 3466
     // Rs 3466 OFF
   },
   {
     id: '004',
-    src: '/images/products/4.jpg',
-    img: ['/images/products/4.jpg', '/images/products/42.jpg', '/images/products/43.jpg', '/images/products/44.jpg', '/images/products/45.jpg', '/images/products/46.jpg'],
+    src: '/products/women/4.jpg',
+    img: ['/products/women/4.jpg', '/products/women/42.jpg', '/products/women/43.jpg', '/products/women/44.jpg', '/products/women/45.jpg', '/products/women/46.jpg'],
     rating: {
       stars: 4,
       noOfReviews: 6200
@@ -103,14 +103,14 @@ let items = [
     discounted_price: 867,
     original_price: 4345,
     discount_percentage: 0,
-    discount_mrp:3478
+    discount_mrp: 3478
     //Rs 3478 OFF
   },
 
   {
     id: '005',
-    src: '/images/products/5.jpg',
-    img: ['/images/products/5.jpg', '/images/products/52.jpg', '/images/products/53.jpg', '/images/products/54.jpg', '/images/products/55.jpg', '/images/products/56.jpg'],
+    src: '/products/women/5.jpg',
+    img: ['/products/women/5.jpg', '/products/women/52.jpg', '/products/women/53.jpg', '/products/women/54.jpg', '/products/women/55.jpg', '/products/women/56.jpg'],
     rating: {
       stars: 4.4,
       noOfReviews: 2000
@@ -122,13 +122,13 @@ let items = [
     discounted_price: 699,
     original_price: 1499,
     discount_percentage: 0,
-    discount_mrp:800
+    discount_mrp: 800
     //Rs 800 OFF
   },
   {
     id: '006',
-    src: '/images/products/6.png',
-    img: ['/images/products/6.png', '/images/products/62.jpg', '/images/products/63.jpg'],
+    src: '/products/women/6.png',
+    img: ['/products/women/6.png', '/products/women/62.jpg', '/products/women/63.jpg'],
     rating: {
       stars: 4.4,
       noOfReviews: 2000
@@ -138,32 +138,32 @@ let items = [
     colors: [
       {
         id: '008',
-        img: '/images/products/colors/1color1.jpg'
+        img: '/products/women/colors/1color1.jpg'
       },
       {
         id: '002',
-        img: '/images/products/colors/1color2.jpg'
+        img: '/products/women/colors/1color2.jpg'
       },
       {
         id: '003',
-        img: '/images/products/colors/1color3.jpg'
+        img: '/products/women/colors/1color3.jpg'
       },
       {
         id: '007',
-        img: '/images/products/colors/1color4.jpg'
+        img: '/products/women/colors/1color4.jpg'
       }
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 897,
     original_price: 4345,
     discount_percentage: 0,
-    discount_mrp:3448
+    discount_mrp: 3448
     //Rs 3448 OFF
   },
   {
     id: '007',
-    src: '/images/products/7.jpg',
-    img: ['/images/products/7.jpg', '/images/products/72.jpg', '/images/products/73.jpg', '/images/products/74.jpg'],
+    src: '/products/women/7.jpg',
+    img: ['/products/women/7.jpg', '/products/women/72.jpg', '/products/women/73.jpg', '/products/women/74.jpg'],
     rating: {
       stars: 4.4,
       noOfReviews: 2000
@@ -173,32 +173,32 @@ let items = [
     colors: [
       {
         id: '008',
-        img: '/images/products/colors/1color1.jpg'
+        img: '/products/women/colors/1color1.jpg'
       },
       {
         id: '002',
-        img: '/images/products/colors/1color2.jpg'
+        img: '/products/women/colors/1color2.jpg'
       },
       {
         id: '003',
-        img: '/images/products/colors/1color3.jpg'
+        img: '/products/women/colors/1color3.jpg'
       },
       {
         id: '006',
-        img: '/images/products/colors/1color6.jpg'
+        img: '/products/women/colors/1color6.jpg'
       }
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 897,
     original_price: 4345,
     discount_percentage: 0,
-    discount_mrp:3448
+    discount_mrp: 3448
     //Rs 3448 OFF
   },
   {
     id: '008',
-    src: '/images/products/8.jpg',
-    img: ['/images/products/8.jpg', '/images/products/82.jpg', '/images/products/83.jpg', '/images/products/84.jpg', '/images/products/85.jpg'],
+    src: '/products/women/8.jpg',
+    img: ['/products/women/8.jpg', '/products/women/82.jpg', '/products/women/83.jpg', '/products/women/84.jpg', '/products/women/85.jpg'],
     rating: {
       stars: 3.6,
       noOfReviews: 4800
@@ -208,28 +208,182 @@ let items = [
     colors: [
       {
         id: '002',
-        img: '/images/products/colors/1color2.jpg'
+        img: '/products/women/colors/1color2.jpg'
       },
       {
         id: '003',
-        img: '/images/products/colors/1color3.jpg'
+        img: '/products/women/colors/1color3.jpg'
       },
       {
         id: '007',
-        img: '/images/products/colors/1color4.jpg'
+        img: '/products/women/colors/1color4.jpg'
       },
       {
         id: '006',
-        img: '/images/products/colors/1color6.jpg'
+        img: '/products/women/colors/1color6.jpg'
       }
     ],
     sizes: ['4XL', '3XL', '5XL', 'S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 897,
     original_price: 4345,
     discount_percentage: 0,
-    discount_mrp:3448
+    discount_mrp: 3448
     //Rs 3448 OFF
+  },
+  {
+    id: '009',
+    src: '/products/men/1.png',
+    img: ['/products/men/1.png', '/products/men/12.png'],
+    rating: {
+      stars: 4.3,
+      noOfReviews: 6
+    },
+    brand: 'Ajile by Pantaloons',
+    name: 'Round Neck Lounge T-shirt',
+    colors: [],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    discounted_price: 399,
+    original_price: 399,
+    discount_percentage: 0,
+    discount_mrp: 0
+
+  },
+  {
+    id: '010',
+    src: '/products/men/2.png',
+    img: ['/products/men/2.png', '/products/men/22.png', '/products/men/23.png'],
+    rating: {
+      stars: 4.3,
+      noOfReviews: 6
+    },
+    brand: 'DAMENSCH',
+    name: 'Ultralight Basic Crew Pure Cotton Lounge T-shirts',
+    colors: [],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    discounted_price: 479,
+    original_price: 599,
+    discount_percentage: 20,
+    discount_mrp: 0
+
   }
+  , {
+    id: '011',
+    src: '/products/men/3.png',
+    img: ['/products/men/3.png', '/products/men/32.png', '/products/men/33.png'],
+    rating: {
+      stars: 4.4,
+      noOfReviews: 1100
+    },
+    brand: 'U.S Polo Assn.',
+    name: 'Men Grey Melange & Black Striped Comfort-Fit Lounge T-Shirt',
+    colors: [],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    discounted_price: 559,
+    original_price: 799,
+    discount_percentage: 30,
+    discount_mrp: 0
+
+  },
+  {
+    id: '012',
+    src: '/products/men/4.png',
+    img: ['/products/men/4.png', '/products/men/42.png', '/products/men/43.png'],
+    rating: {
+      stars: 4.4,
+      noOfReviews: 1100
+    },
+    brand: 'MASCLN SASSAFRAS',
+    name: 'Unisex Printed Applique T-shirt',
+    colors: [],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    discounted_price: 599,
+    original_price: 1499,
+    discount_percentage: 60,
+    discount_mrp: 0
+
+  },
+  {
+    id: '013',
+    src: '/products/men/5.png',
+    img: ['/products/men/5.png', '/products/men/52.png'],
+    rating: {
+      stars: 4.4,
+      noOfReviews: 1100
+    },
+    brand: 'Campus Sutra',
+    name: 'Classic Buffalo Checked Casual Shirt',
+    colors: [
+      {
+        id: '014',
+        img: '/products/men/colors/6.png'
+      }
+    ],
+    sizes: ['38', '40', '42', '44'],
+    discounted_price: 599,
+    original_price: 1499,
+    discount_percentage: 60,
+    discount_mrp: 0
+
+  },
+  {
+    id: '014',
+    src: '/products/men/6.png',
+    img: ['/products/men/6.png', '/products/men/62.png'],
+    rating: {
+      stars: 4.3,
+      noOfReviews: 1400
+    },
+    brand: 'Campus Sutra',
+    name: 'Men Classic Buffalo Checked Cotton Casual Shirt',
+    colors: [
+      {
+        id: '013',
+        img: '/products/men/colors/5.png'
+      }
+    ],
+    sizes: ['38', '40', '42', '44'],
+    discounted_price: 607,
+    original_price: 1899,
+    discount_percentage: 68,
+    discount_mrp: 0
+  },
+  {
+    id: '015',
+    src: '/products/men/7.png',
+    img: ['/products/men/7.png', '/products/men/72.png','/products/men/73.png'],
+    rating: {
+      stars: 4.1,
+      noOfReviews: 6000
+    },
+    brand: 'Roadster',
+    name: 'Men Navy Blue & Grey Checked Casual Shirt',
+    colors: [],
+    sizes: ['38', '40', '42', '44'],
+    discounted_price: 559,
+    original_price: 1999,
+    discount_percentage: 72,
+    discount_mrp: 0
+  },
+  {
+    id: '016',
+    src: '/products/men/8.png',
+    img: ['/products/men/8.png', '/products/men/82.png'],
+    rating: {
+      stars: 4.1,
+      noOfReviews: 6000
+    },
+    brand: 'Anouk',
+    name: 'Men Geometric Printed Cotton Indigo Kurta',
+    colors: [],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    discounted_price: 725,
+    original_price: 2199,
+    discount_percentage: 67,
+    discount_mrp: 0
+  }
+
+
+
 ]
 
 export default items;

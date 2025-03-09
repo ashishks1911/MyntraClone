@@ -38,10 +38,10 @@ const Footer = () => {
         <p className="info-title">Experience myntra app on mobile</p>
         <div className="download">
           <div>
-            <img src="images/google-play-store.webp" alt="" />
+            <img src="/google-play-store.webp" alt="" />
           </div>
           <div>
-            <img src="images/app-store.png" alt="" />
+            <img src="/app-store.png" alt="" />
           </div>
         </div>
         <p className="info-title">Keep in touch</p>
@@ -54,11 +54,11 @@ const Footer = () => {
       </div>
       <div className="myntra-promises">
         <div className="myntra-promise">
-          <img src="/images/myntra-original.png" alt="" />
+          <img src="/myntra-original.png" alt="" />
           <div><b>100% Original</b> guarantee for all products at myntra.com</div>
         </div>
         <div className="myntra-promise">
-          <img src="/images/myntra-return.png" alt="" />
+          <img src="/myntra-return.png" alt="" />
           <div><strong>Return Within 14 days</strong> of reciving your order</div>
         </div>
       </div>
