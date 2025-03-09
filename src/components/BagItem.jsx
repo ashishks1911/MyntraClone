@@ -15,7 +15,7 @@ const BagItem = ({ bagItem }) => {
       <div className='bag-item-left'>
         <div className='w-32 relative'>
           <div className='absolute left-1 top-1'>
-            <input type="checkbox" name={item.id} id={item.id} checked className='w-4 h-4'/>
+            <input type="checkbox" name={item.id} id={item.id} defaultChecked className='w-4 h-4'/>
           </div>
           <img src={item.src} alt="" className='w-full' />
         </div>

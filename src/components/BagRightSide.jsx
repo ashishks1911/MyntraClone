@@ -11,7 +11,7 @@ const BagRightSide = ({ bagItems }) => {
   const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect(() => {
-    if(bagItems.length==0){
+    if (bagItems.length == 0) {
       setTotalMRP(0)
       setDiscountOnMRP(0);
       setPlatformFee(0);
@@ -24,7 +24,7 @@ const BagRightSide = ({ bagItems }) => {
     bagItems.forEach((bagItem) => {
       const item = items.find((item) => item.id === bagItem.id);
       totalPrice += item.original_price * bagItem.qty;
-      totalDiscount += item.discount_percentage!=0? (item.original_price* item.discount_percentage/100)* bagItem.qty :item.discount_mrp * bagItem.qty;
+      totalDiscount += item.discount_percentage != 0 ? (item.original_price * item.discount_percentage / 100) * bagItem.qty : item.discount_mrp * bagItem.qty;
 
     });
 
@@ -32,10 +32,14 @@ const BagRightSide = ({ bagItems }) => {
     setDiscountOnMRP(Math.floor(totalDiscount));
     setPlatformFee(20);
     setShippingFee(20);
-    let totalSum = totalPrice - totalDiscount + platformFee + shippingFee;
-    setTotalAmount(totalSum);
 
   }, [bagItems]);
+
+  useEffect(() => {
+    let totalSum = totalMRP - discountOnMRP + platformFee + shippingFee;
+    setTotalAmount(totalSum);
+
+  }, [totalMRP, discountOnMRP, platformFee, shippingFee])
 
   return (
     <div className="bag-right-block border-l p-4">
@@ -98,7 +102,7 @@ const BagRightSide = ({ bagItems }) => {
             <div className='text-sm font-normal pt-1 text-green-500'>- &#8377;{discountOnMRP}</div>
             <div className='text-sm pt-1'><button className='text-red-500'>Apply Coupon</button></div>
             <div className='text-sm font-normal pt-1'>&#8377;{platformFee}</div>
-            <div className='text-sm font-normal pt-1 text-green-500'>{shippingFee==0? 'FREE': `'&#8377;'${shippingFee}`}</div>
+            <div className='text-sm font-normal pt-1 text-green-500'>{shippingFee == 0 ? 'FREE' : `'&#8377;'${shippingFee}`}</div>
           </div>
         </div>
         <hr className='mt-2' />
