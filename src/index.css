@@ -372,20 +372,20 @@ main {
 }
 
 .item-details-container {
-  width: 96%;
+  /* width: 96%; */
   margin: 0 auto;
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 58% 42%;
 }
 
 .item-details-image-container {
-  float: left;
-  padding-right: 15px;
+  /* float: left; */
+  /* padding-right: 15px; */
 }
 
 .item-image-container {
-  width: 49%;
-  display: inline-block;
+  /* width: 49%; */
+  /* display: inline-block; */
   overflow: hidden;
   margin: 2px;
 }

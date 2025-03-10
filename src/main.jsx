@@ -9,6 +9,7 @@ import ItemDetails from './components/ItemDetails.jsx'
 import Bag from './routes/Bag.jsx'
 import WishList from './components/WishList.jsx'
 import ItemList from './routes/ItemList.jsx'
+import MobileCarousel from './components/MobileCarousel.jsx'
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,9 @@ const router = createBrowserRouter([
       },
       {
         path: 'category/:category', element: <ItemList />
+      },
+      {
+        path: '/test', element: <MobileCarousel />
       }
     ]
   },
