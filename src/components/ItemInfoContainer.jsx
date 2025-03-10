@@ -93,7 +93,7 @@ const ItemInfo = ({ item }) => {
           <div className='size-error-message mt-5 hidden'>
             <span className='text-red-500'>Please Select a size</span>
           </div>
-          <div className="size-buttons-size-buttons">
+          <div className="size-buttons-size-buttons flex-wrap">
             {
               item.sizes.map((size) =>
                 <div className="size-buttons-btn-container ">

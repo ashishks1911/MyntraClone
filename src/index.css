@@ -508,6 +508,7 @@ main {
 .size-buttons-size-buttons {
   display: flex;
   align-items: center;
+  margin-bottom: 14px;
 }
 
 .size-buttons-btn-container {
@@ -521,7 +522,7 @@ main {
   justify-content: center;
   align-items: center;
   font-weight: 600;
-  margin: 15px 5px;
+  margin: 5px;
 }
 
 .size-buttons-btn-container:hover {
