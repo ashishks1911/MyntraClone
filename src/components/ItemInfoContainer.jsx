@@ -65,7 +65,7 @@ const ItemInfo = ({ item }) => {
             <div className='flex'>
               {
                 item.colors.map((color) =>
-                  <Link to={`/item/${color.id}`} className='color-options'><img src={color.img} alt="" /></Link>
+                  <Link to={`/category/${item.category}/item/${color.id}`} className='color-options'><img src={color.img} alt="" /></Link>
                 )
               }
             </div>

@@ -367,6 +367,9 @@ main {
   text-decoration: none;
   color: #282c3f;
 }
+.breadcrumbs-link{
+  padding: 0 6px;
+}
 
 .item-details-container {
   width: 96%;

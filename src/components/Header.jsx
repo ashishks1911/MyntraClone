@@ -14,7 +14,7 @@ const Header = () => {
         <Link to="/category/men" >men</Link>
         <Link to="/category/women" >women</Link>
         <Link to="/category/kids" >kids</Link>
-        <Link to="/" >home & living</Link>
+        <Link to="/category/living" >home & living</Link>
         <Link to="/" >beauty</Link>
         <Link to="/" >studio <sup>new</sup></Link>
       </nav>

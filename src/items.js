@@ -452,6 +452,143 @@ let items = [
     discount_percentage: 81,
     discount_mrp: 0
   }
+  ,
+  {
+    id: '020',
+    src: '/products/living/1.png',
+    img: ['/products/living/1.png', '/products/living/12.png', '/products/living/13.png','/products/living/14.png'],
+    rating: {
+      stars: 4.4,
+      noOfReviews: 36
+    },
+    brand: 'Saral Home',
+    name: 'Black & Beige Handloom Geometric Runner',
+    category: 'living',
+    colors: [],
+    sizes: ['Onesize'],
+    discounted_price: 499,
+    original_price: 999,
+    discount_percentage: 50,
+    discount_mrp: 0
+  },
+  {
+    id: '021',
+    src: '/products/living/2.png',
+    img: ['/products/living/2.png', '/products/living/22.png',],
+    
+    brand: 'Kuber Industries',
+    name: 'Red & Green Ethnic Motifs Printed Bed Side Runner',
+    category: 'living',
+    colors: [],
+    sizes: ['Onesize'],
+    discounted_price: 351,
+    original_price: 1599,
+    discount_percentage: 78,
+    discount_mrp: 0
+  },
+  {
+    id: '022',
+    src: '/products/living/3.jpg',
+    img: ['/products/living/3.jpg', '/products/living/32.jpg','/products/living/33.jpg'],
+    
+    brand: 'OBSESSIONS',
+    name: 'Beige & Brown Ethnic MotifsRectangular Bedside Runners',
+    category: 'living',
+    colors: [],
+    sizes: ['Onesize'],
+    discounted_price: 2975,
+    original_price: 3500,
+    discount_percentage: 15,
+    discount_mrp: 0
+  },
+  {
+    id: '023',
+    src: '/products/living/4.jpg',
+    img: ['/products/living/4.jpg', '/products/living/42.jpg','/products/living/43.jpg','/products/living/44.jpg'],
+    rating: {
+      stars: 3.8,
+      noOfReviews: 19
+    },
+    brand: 'Marks & Spencer',
+    name: 'Navy Blue Solid 230 TC Double King Cotton Bedsheet',
+    category: 'living',
+    colors: [],
+    sizes: ['Double King'],
+    company : 'MARKS AND SPENCER RELIANCE INDIA PRIVATE LIMITED',
+    discounted_price: 799,
+    original_price: 1999,
+    discount_percentage: 60,
+    discount_mrp: 0
+  },
+  {
+    id: '024',
+    src: '/products/living/5.jpg',
+    img: ['/products/living/5.jpg', '/products/living/52.jpg'],
+    rating: {
+      stars: 4.3,
+      noOfReviews: 2300
+    },
+    brand: 'Dreamscape',
+    name: 'Blue Ethnic 144 TC Cotton 1 Queen Bedsheet with 2 Reversible Pillow Covers',
+    category: 'living',
+    colors: [],
+    sizes: ['Double Queen'],
+    discounted_price: 539,
+    original_price: 1999,
+    company: 'Truenet Commerce',
+    discount_percentage: 73,
+    discount_mrp: 0
+  },
+  {
+    id: '025',
+    src: '/products/living/6.jpg',
+    img: ['/products/living/6.jpg', '/products/living/62.jpg', '/products/living/63.jpg', '/products/living/64.jpg'],
+    rating: {
+      stars: 4.6,
+      noOfReviews: 981
+    },
+    brand: 'Jockey',
+    name: 'Pack Of 2 Cotton Terry Ultrasoft and Durable Solid Hand Towel-T201',
+    category: 'living',
+    colors: [
+      {
+        id : '026',
+        img : '/products/living/colors/26.png',
+      }
+    ],
+    sizes: ['Onesize'],
+    discounted_price: 539,
+    original_price: 1999,
+    company: 'TrueCom Retail',
+    discount_percentage: 73,
+    discount_mrp: 0
+  },
+  {
+    id: '026',
+    src: '/products/living/7.jpg',
+    img: ['/products/living/7.jpg', '/products/living/72.jpg', '/products/living/73.jpg'],
+    rating: {
+      stars: 4.6,
+      noOfReviews: 370
+    },
+    brand: 'Jockey',
+    name: 'Pack Of 2 Cotton Terry Ultrasoft and Durable Solid Hand Towel-T201',
+    category: 'living',
+    colors: [
+      {
+        id : '025',
+        img : '/products/living/colors/25.png',
+      }
+    ],
+    sizes: ['Onesize'],
+    discounted_price: 439,
+    original_price: 439,
+    company: 'TrueCom Retail',
+    discount_percentage: 0,
+    discount_mrp: 0
+  } 
+
+
 
 
 

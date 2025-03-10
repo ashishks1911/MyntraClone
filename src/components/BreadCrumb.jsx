@@ -2,7 +2,7 @@ import React from 'react'
 
 const BreadCrumb = ({brand}) => {
   return (
-    <div className='breadcrumbs-container'>
+    <div className='breadcrumbs-container text-sm'>
       <a href="#" className="breadcrumbs-link">Home</a>
       <span className="breadcrumbs-separator">/</span>
       <a href="#" className="breadcrumbs-link">Clothing</a>
@@ -11,7 +11,7 @@ const BreadCrumb = ({brand}) => {
       <span className="breadcrumbs-separator">/</span>
       <a href="#" className="breadcrumbs-link">Kutra Sets</a>
       <span className="breadcrumbs-separator">/</span>
-      <a href="#" className="breadcrumbs-link">More by {brand} </a>
+      <a href="#" className="breadcrumbs-link font-bold">More by {brand}</a>
     </div>
   )
 }
