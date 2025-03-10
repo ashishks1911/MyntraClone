@@ -28,6 +28,9 @@ const ItemInfo = ({ item }) => {
       }
     }
     console.log(bagItems)
+    setSize('');
+    document.querySelector('.size-error-message').classList.add('hidden');
+    document.querySelector('.seller-info').classList.add('hidden');
   }
 
   return (
@@ -94,10 +97,9 @@ const ItemInfo = ({ item }) => {
             {
               item.sizes.map((size) =>
                 <div className="size-buttons-btn-container ">
-                  <button key={size} className='w-full h-full border border-gray-400 hover:border-red-500 focus:text-red-500 focus:border-red-500 rounded-full' onClick={() => setSize(size)}>{size}</button>
+                  <button key={size} className='w-full border border-gray-400 hover:border-red-500 focus:text-red-500 focus:border-red-500 rounded-full px-5 py-3' onClick={() => setSize(size)}>{size}</button>
                 </div>
               )
-
             }
           </div>
         </div>
