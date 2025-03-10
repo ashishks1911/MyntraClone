@@ -38,7 +38,7 @@ header {
 }
 
 .nav-bar {
-  display: flex;
+  /* display: flex; */
   min-width: 510px;
   width: 34%;
   justify-content: space-between;
@@ -65,7 +65,7 @@ header {
 }
 
 .search-bar {
-  display: flex;
+  /* display: flex; */
   flex-direction: row;
   align-items: center;
   width: 34%;
@@ -99,7 +99,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 15px;
+  /* padding: 0 15px; */
   text-decoration: none;
   color: #000;
   position: relative;
@@ -140,11 +140,11 @@ footer {
 }
 
 #footer {
-  display: flex;
+  /* display: flex; */
   margin-top: 150px;
   width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
+  /* margin-left: 15%;
+  margin-right: 15%; */
 
 }
 
@@ -158,7 +158,7 @@ footer {
 }
 
 .shop-links {
-  width: 220px;
+  /* width: 220px; */
 }
 
 .customer-policies {
@@ -170,7 +170,7 @@ footer {
 }
 
 .app-download {
-  width: 380px;
+  width: 345px;
 }
 
 .download div img {
@@ -237,15 +237,15 @@ main {
 }
 
 .items-container {
-  width: 80%;
+  /* width: 80%; */
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
 }
 
 .item-container {
-  width: 200px;
+  /* width: 200px; */
   position: relative;
   cursor: pointer;
   margin: 10px;
@@ -315,7 +315,7 @@ main {
 }
 
 .item-actions {
-  display: none;
+  /* display: none; */
   background: #fff;
   font-size: 12px;
   font-weight: 700;
@@ -347,7 +347,7 @@ main {
 }
 
 .item-container:hover .item-actions {
-  display: flex;
+  /* display: flex; */
 }
 
 .item-container:hover {
