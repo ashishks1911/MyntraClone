@@ -9,7 +9,7 @@ const ItemContainer = ({ item }) => {
   }
 
   return (
-    <div className="item-container md:w-[200px] w-[160px]" onClick={() => handleItemClick(item.id)}>
+    <div className="item-container md:w-[200px] w-[160px] group" onClick={() => handleItemClick(item.id)}>
       <div className='relative'>
         <img className="item-image" src={item.src} alt="" />
         {
@@ -19,7 +19,7 @@ const ItemContainer = ({ item }) => {
         }
 
       </div>
-      <div className="item-actions">
+      <div className="item-actions hidden md:group-hover:flex">
         <span className="item-wishlist">
           <span className="material-symbols-outlined item-wishlist-icon">
             favorite
