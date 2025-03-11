@@ -31,8 +31,6 @@ const ItemInfo = ({ item }) => {
     }
     console.log(bagItems)
     setSize('');
-    document.querySelector('.size-error-message').classList.add('hidden');
-    document.querySelector('.seller-info').classList.add('hidden');
   }
 
   return (
