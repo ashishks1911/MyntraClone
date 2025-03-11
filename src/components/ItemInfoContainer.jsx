@@ -85,7 +85,7 @@ const ItemInfo = ({ item }) => {
           </div>
         </div>
         <div className='md:hidden block px-3 py-8'>
-            <BagOffers/>
+          <BagOffers />
         </div>
         <div className="size-buttons-container">
           <div className="size-buttons-header flex md:justify-start justify-between px-3 md:px-0">
@@ -98,7 +98,7 @@ const ItemInfo = ({ item }) => {
           <div className='size-error-message mt-5 hidden'>
             <span className='text-red-500'>Please Select a size</span>
           </div>
-          <div className="size-buttons-size-buttons flex-wrap">
+          <div className="size-buttons-size-buttons md:flex-wrap w-[24rem] overflow-x-auto nowrap mx-auto py-4 md:mx-0">
             {
               item.sizes.map((size) =>
                 <div className="size-buttons-btn-container ">
@@ -106,6 +106,7 @@ const ItemInfo = ({ item }) => {
                 </div>
               )
             }
+
           </div>
         </div>
         <div className="bag-wishlist-btn-container">

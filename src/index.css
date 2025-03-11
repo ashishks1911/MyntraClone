@@ -367,7 +367,8 @@ main {
   text-decoration: none;
   color: #282c3f;
 }
-.breadcrumbs-link{
+
+.breadcrumbs-link {
   padding: 0 6px;
 }
 
@@ -509,6 +510,16 @@ main {
   display: flex;
   align-items: center;
   margin-bottom: 14px;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.size-buttons-size-buttons::-webkit-scrollbar {
+  display: none;
 }
 
 .size-buttons-btn-container {
@@ -578,7 +589,7 @@ main {
   margin-left: 5px;
 }
 
-.color-options{
+.color-options {
   margin: 2px;
 }
 
@@ -592,7 +603,7 @@ main {
   background-color: #ffffffdd;
 }
 
-.delivery-check{
+.delivery-check {
   display: flex;
   padding: 15px;
   width: 100%;
