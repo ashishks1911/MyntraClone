@@ -541,30 +541,30 @@ main {
 }
 
 .bag-wishlist-btn-container {
-  display: flex;
-  width: 80%;
+  /* display: flex; */
+  /* width: 80%; */
 }
 
 .bag-btn-container {
-  padding: 12px 0px;
+  /* padding: 12px 0px; */
   display: flex;
   font-size: 14px;
   border-radius: 7px;
   border: none;
-  flex: 2;
+  /* flex: 2; */
   align-items: center;
   font-weight: 700;
   text-transform: uppercase;
   justify-content: center;
   background-color: #ff3e6c;
-  margin-right: 15px;
+  /* margin-right: 15px; */
   color: #fff;
 }
 
 .wishlist-btn-container {
-  padding: 12px 0px;
+  /* padding: 12px 0px; */
   display: flex;
-  flex: 1;
+  /* flex: 1; */
   font-size: 14px;
   border-radius: 7px;
   border: none;

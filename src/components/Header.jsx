@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header>
+    <header className='z-50'>
       <div className="logo-container">
         <Link to="/" ><img className="logo" src="/myntra.svg" alt="myntra logo" /></Link>
       </div>

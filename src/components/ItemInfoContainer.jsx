@@ -43,7 +43,7 @@ const ItemInfo = ({ item }) => {
         {
 
           item.rating != null &&
-          <div className="item-details-rating absolute md:relative text-xs md:text-base right-3 bottom-28 md:top-0 md:bottom-0 z-10 md:left-1 bg-white border-2 rounded-full md:rounded">
+          <div className="item-details-rating absolute md:relative text-xs md:text-base right-3 bottom-16 md:top-0 md:bottom-0 z-10 md:left-1 bg-white border-2 rounded-full md:rounded">
             <div className="item-overall-rating">
               {item.rating.stars} <i className="fa-solid fa-star review-star-icon"></i>
             </div>
@@ -98,7 +98,7 @@ const ItemInfo = ({ item }) => {
           <div className='size-error-message mt-5 hidden'>
             <span className='text-red-500'>Please Select a size</span>
           </div>
-          <div className="size-buttons-size-buttons md:flex-wrap w-[24rem] overflow-x-auto nowrap mx-auto py-4 md:mx-0">
+          <div className="size-buttons-size-buttons md:flex-wrap md:w-full w-[24rem] overflow-x-auto nowrap mx-auto py-4 md:mx-0">
             {
               item.sizes.map((size) =>
                 <div className="size-buttons-btn-container ">
@@ -109,14 +109,14 @@ const ItemInfo = ({ item }) => {
 
           </div>
         </div>
-        <div className="bag-wishlist-btn-container">
-          <button type="button" className="bag-btn-container" onClick={() => addToBag(item.id)}>
+        <div className="bag-wishlist-btn-container flex w-full md:w-[80%] px-3 md:px-0 fixed bottom-0 bg-white py-3 md:static">
+          <button type="button" className="bag-btn-container order-2 md:mr-5 flex-1 md:flex-2 md:py-4 py-2" onClick={() => addToBag(item.id)}>
             <span className="material-symbols-outlined">
               shopping_bag
             </span>
             <span className="add-to-bag">Add to Bag</span>
           </button>
-          <button type="button" className="wishlist-btn-container">
+          <button type="button" className="wishlist-btn-container md:order-2 order-1 mr-4 flex-1 md:py-4 py-2">
             <span className="material-symbols-outlined">
               favorite
             </span>
