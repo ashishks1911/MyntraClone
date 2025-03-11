@@ -31,9 +31,10 @@ const BagOffers = () => {
     // Flat ₹50 on Airtel Payments Bank transactions on a min spend of
     // ₹1,000. TCA
   ];
-  
+
   return (
-    <div className="offers border rounded mt-3 p-4">
+    <div className="offers border md:rounded mt-3 p-4 rounded-3xl">
+      <h2 className='text-xl font-bold pb-2'>Offers</h2>
       <div className="flex pb-1">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -47,20 +48,28 @@ const BagOffers = () => {
             <path d="M10.897 6.34l-4.553 4.562a.536.536 0 0 0 .76.758l4.552-4.562a.536.536 0 0 0-.76-.758M6.75 7.875a1.126 1.126 0 0 0 0-2.25 1.126 1.126 0 0 0 0 2.25M11.25 10.125a1.126 1.126 0 0 0 0 2.25 1.126 1.126 0 0 0 0-2.25"></path>
           </g>
         </svg>
-        <h2 className="px-2 font-bold text-sm">Available Offers</h2>
+        <h2 className="px-2 font-bold text-sm">
+          <span className='md:inline hidden'>
+            Available Offers
+          </span>
+          <span className='md:hidden'>
+            Bank Offers
+          </span>
+        </h2>
       </div>
-      <div className="text-xs px-2 py-2">
-        <li className="offer-message">
+      <div className="text-xs px-2 md:py-2">
+        <li className="offer-message list-none md:list-disc">
           10% Instant Discount on Axis Bank Credit Card and Credit Card EMI
           on a min spend of ₹3,500. TCA
         </li>
       </div>
-      <div className="show-more-offers px-7 flex items-center cursor-pointer">
+      <div className="show-more-offers px-7 items-center cursor-pointer md:flex hidden">
         <span className="text-red-500 text-sm" >Show More</span>
         <div style={{ color: "ff3e6c" }} className="pl-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" class="offersV2-base-arrowIcon" style={{ transform: "rotate(90deg)", color: "#ff3e6c" }}><path fill-rule="evenodd" d="M6.797 5.529a.824.824 0 0 0-.042-.036L1.19.193a.724.724 0 0 0-.986 0 .643.643 0 0 0 0 .94L5.316 6 .203 10.868a.643.643 0 0 0 0 .938.724.724 0 0 0 .986 0l5.566-5.299a.644.644 0 0 0 .041-.978"></path></svg>
         </div>
       </div>
+      <span className="text-red-500 text-sm font-bold md:hidden inline pl-2">More Bank Offers</span>
     </div>
   )
 }

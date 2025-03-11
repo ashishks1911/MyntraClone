@@ -405,57 +405,57 @@ main {
 }
 
 .item-details-rating-container {
-  border-bottom: 1px solid #d4d5d9;
+  /* border-bottom: 1px solid #d4d5d9; */
 }
 
 .item-details-rating {
   border: 1px solid #eaeaec;
-  font-size: 16px;
+  /* font-size: 16px; */
   font-weight: 700;
   padding: 8px;
-  border-radius: 2px;
+  /* border-radius: 2px; */
   display: flex;
   margin-bottom: 12px;
   width: fit-content;
 }
 
 .item-details-brand {
-  font-size: 24px;
+  /* font-size: 24px; */
   color: #282c3f;
   font-weight: 700;
-  margin-bottom: 6px;
+  /* margin-bottom: 6px; */
 }
 
 .item-details-name {
-  font-size: 20px;
+  /* font-size: 20px; */
   color: #535665;
   font-weight: 400;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
 }
 
 .item-rating-count {
   font-weight: 400;
-  margin-left: 8px;
+  /* margin-left: 8px; */
 }
 
 .item-details-discounted-price {
   color: #282c3f;
-  margin-right: 12px;
-  font-size: 24px;
+  /* margin-right: 12px; */
+  /* font-size: 24px; */
   font-weight: 700;
   cursor: pointer;
 }
 
 .item-details-original-price {
-  font-size: 20px;
+  /* font-size: 20px; */
   color: #282c3f;
-  margin-right: 12px;
+  /* margin-right: 12px; */
   opacity: 0.8;
   text-decoration: line-through;
 }
 
 .item-details-discount {
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: 700;
   color: #ff905a;
 }
@@ -478,7 +478,7 @@ main {
 }
 
 .size-buttons-header {
-  display: flex;
+  /* display: flex; */
   margin-right: 10px;
 }
 
