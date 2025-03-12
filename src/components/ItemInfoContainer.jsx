@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useOutletContext } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import BagOffers from "../components/BagOffers";
+import WishListBagBtn from './WishListBagBtn';
+import SelectSize from './SelectSize';
 
 
 const ItemInfo = ({ item }) => {
 
   const [size, setSize] = useState('');
-  const { bagItems, setBagItems } = useOutletContext();
 
   useEffect(() => {
     if (size.length != 0) {
@@ -14,24 +15,6 @@ const ItemInfo = ({ item }) => {
     }
   }, [size]);
 
-  const addToBag = (itemId) => {
-    const qty = 1;
-    if (size.length == 0) {
-      document.querySelector('.size-error-message').classList.remove('hidden');
-    } else {
-      let item = bagItems.filter((item) => item.id == itemId && item.size === size);
-      if (item.length != 0) {
-        console.log('You have this item in your bag and we have increased the quantity by 1')
-        setBagItems((bagItems) => bagItems.map((item) => item.id === itemId && item.size === size ? { ...item, qty: item.qty + 1 } : item));
-        return;
-      }
-      else {
-        setBagItems((bagItems) => [...bagItems, { id: itemId, size, qty }]);
-      }
-    }
-    console.log(bagItems)
-    setSize('');
-  }
 
   return (
     <div className="item-details-description-container">
@@ -85,42 +68,8 @@ const ItemInfo = ({ item }) => {
         <div className='md:hidden block px-3 py-8'>
           <BagOffers />
         </div>
-        <div className="size-buttons-container">
-          <div className="size-buttons-header flex md:justify-start justify-between px-3 md:px-0">
-            <h4 className="size-buttons-size font-bold">Select Size</h4>
-            <span className="size-buttons-chart">
-              <button className="size-buttons-show-chart font-bold">Size chart</button>
-              <span className="size-buttons-arrow"></span>
-            </span>
-          </div>
-          <div className='size-error-message mt-5 hidden'>
-            <span className='text-red-500'>Please Select a size</span>
-          </div>
-          <div className="size-buttons-size-buttons md:flex-wrap md:w-full w-[24rem] overflow-x-auto nowrap mx-auto py-4 md:mx-0">
-            {
-              item.sizes.map((size) =>
-                <div className="size-buttons-btn-container ">
-                  <button key={size} className='w-full border border-gray-400 hover:border-red-500 focus:text-red-500 focus:border-red-500 rounded-full px-5 py-3' onClick={() => setSize(size)}>{size}</button>
-                </div>
-              )
-            }
-
-          </div>
-        </div>
-        <div className="bag-wishlist-btn-container flex w-full md:w-[80%] px-3 md:px-0 fixed bottom-0 bg-white py-3 md:static">
-          <button type="button" className="bag-btn-container order-2 md:mr-5 flex-1 md:flex-2 md:py-4 py-2" onClick={() => addToBag(item.id)}>
-            <span className="material-symbols-outlined">
-              shopping_bag
-            </span>
-            <span className="add-to-bag">Add to Bag</span>
-          </button>
-          <button type="button" className="wishlist-btn-container md:order-2 order-1 mr-4 flex-1 md:py-4 py-2">
-            <span className="material-symbols-outlined">
-              favorite
-            </span>
-            <span className="wishlist-btn-title">Wishlist</span>
-          </button>
-        </div>
+        <SelectSize sizes = {item.sizes} size={size} setSize={setSize} />
+        <WishListBagBtn itemId={item.id} size={size} setSize={setSize} />
         <div className='seller-info p-3 mt-5 hidden'>
           <hr className='py-1' />
           <div>
