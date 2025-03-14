@@ -18,8 +18,8 @@ const SelectSize = ({sizes, setSize}) => {
       <div className="size-buttons-size-buttons md:flex-wrap md:w-full w-[24rem] overflow-x-auto nowrap mx-auto py-4 md:mx-0">
         {
           sizes.map((size) =>
-            <div className="size-buttons-btn-container ">
-              <button key={size} className='w-full border border-gray-400 hover:border-red-500 focus:text-red-500 focus:border-red-500 rounded-full px-5 py-3' onClick={() => setSize(size)}>{size}</button>
+            <div key={size} className="size-buttons-btn-container ">
+              <button  className='w-full border border-gray-400 hover:border-red-500 focus:text-red-500 focus:border-red-500 rounded-full px-5 py-3' onClick={() => setSize(size)}>{size}</button>
             </div>
           )
         }
