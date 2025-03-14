@@ -9,6 +9,7 @@ let items = [
     },
     brand: 'Clora Creation',
     category: 'women',
+    subcategory: 'Legging',
     name: 'Solid Woollen Legging',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL', 'XXL', '3XL'],
@@ -30,6 +31,7 @@ let items = [
     company: 'GOSRIKI FASHION PRIVATE LIMITED',
     name: 'Women Kurta Set',
     category: 'women',
+    subcategory: 'Kurta Sets',
     colors: [
       {
         id: '008',
@@ -66,6 +68,7 @@ let items = [
     brand: 'GoSriKi',
     category: 'women',
     name: 'Women Kurta Set',
+    subcategory: 'Kurta Sets',
     sizes: ['S', 'M', 'L', 'XL', 'XXL', '4XL', '3XL', '5XL'],
     colors: [
       {
@@ -102,6 +105,7 @@ let items = [
     brand: 'GoSriKi',
     name: 'Printed Straight Kurta Set',
     category: 'women',
+    subcategory: 'Kurta Sets',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL', 'XXL', '3XL'],
     discounted_price: 867,
@@ -122,6 +126,7 @@ let items = [
     brand: 'Libas',
     name: 'Embroidered Kurta',
     category: 'women',
+    subcategory: 'Kurta Sets',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL'],
     discounted_price: 699,
@@ -141,6 +146,7 @@ let items = [
     brand: 'GoSriki',
     name: 'Women printed Regular Kurta Set with dupatta',
     category: 'women',
+    subcategory: 'Kurta Sets',
     colors: [
       {
         id: '008',
@@ -177,6 +183,7 @@ let items = [
     brand: 'GoSriki',
     name: 'Women Regular Kurta with Palazzos & With dupatta',
     category: 'women',
+    subcategory: 'Kurta Sets',
     colors: [
       {
         id: '008',
@@ -213,6 +220,7 @@ let items = [
     brand: 'GoSriki',
     name: 'Women Regular Kurta with Trouser & Dupatta Set',
     category: 'women',
+    subcategory: 'Kurta Sets',
     colors: [
       {
         id: '002',
@@ -249,6 +257,7 @@ let items = [
     brand: 'Ajile by Pantaloons',
     name: 'Round Neck Lounge T-shirt',
     category: 'men',
+    subcategory: 'T-shirts',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 399,
@@ -268,6 +277,7 @@ let items = [
     brand: 'DAMENSCH',
     name: 'Ultralight Basic Crew Pure Cotton Lounge T-shirts',
     category: 'men',
+    subcategory: 'T-shirts',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 479,
@@ -287,6 +297,7 @@ let items = [
     brand: 'U.S Polo Assn.',
     name: 'Men Grey Melange & Black Striped Comfort-Fit Lounge T-Shirt',
     category: 'men',
+    subcategory: 'T-shirts',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 559,
@@ -306,6 +317,7 @@ let items = [
     brand: 'MASCLN SASSAFRAS',
     name: 'Unisex Printed Applique T-shirt',
     category: 'men',
+    subcategory: 'T-shirts',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 599,
@@ -325,6 +337,7 @@ let items = [
     brand: 'Campus Sutra',
     name: 'Classic Buffalo Checked Casual Shirt',
     category: 'men',
+    subcategory: 'Casual Shirts',
     colors: [
       {
         id: '014',
@@ -349,6 +362,7 @@ let items = [
     brand: 'Campus Sutra',
     name: 'Men Classic Buffalo Checked Cotton Casual Shirt',
     category: 'men',
+    subcategory: 'Casual Shirts',
     colors: [
       {
         id: '013',
@@ -372,6 +386,7 @@ let items = [
     brand: 'Roadster',
     name: 'Men Navy Blue & Grey Checked Casual Shirt',
     category: 'men',
+    subcategory: 'Casual Shirts',
     colors: [],
     sizes: ['38', '40', '42', '44'],
     discounted_price: 559,
@@ -390,6 +405,7 @@ let items = [
     brand: 'Anouk',
     name: 'Men Geometric Printed Cotton Indigo Kurta',
     category: 'men',
+    subcategory: 'Kurta',
     colors: [],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     discounted_price: 725,
@@ -410,6 +426,7 @@ let items = [
     brand: 'HELLCAT',
     name: 'Boys Pack Of 3 Printed Cotton T-shirt',
     category: 'kids',
+    subcategory: 'T-shirts',
     colors: [],
     sizes: ['3-4Y', '5-6Y', '7-8Y', '9-10Y', '11-12Y', '13-14Y', '15-16Y'],
     discounted_price: 389,
@@ -426,6 +443,7 @@ let items = [
     brand: 'itsmycostume',
     name: 'Unisex Kids Holi tshirts',
     category: 'kids',
+    subcategory: 'T-shirts',
     colors: [],
     sizes: ['1-2Y', '2-3Y', '3-4Y', '4-5Y', '5-6Y', '7-8Y'],
     discounted_price: 379,
@@ -445,6 +463,7 @@ let items = [
     brand: 'Minicult',
     name: 'Kids Pack of 2 Mickey Mouse Printed Cotton T-shirt',
     category: 'kids',
+    subcategory: 'T-shirts',
     colors: [],
     sizes: ['18-24M', '2-3Y', '3-4Y', '5-6Y', '7-8Y', '9-10Y', '11-12Y', '13-14Y', '15-16Y'],
     discounted_price: 379,
@@ -464,6 +483,7 @@ let items = [
     brand: 'Saral Home',
     name: 'Black & Beige Handloom Geometric Runner',
     category: 'living',
+    subcategory: 'Runner',
     colors: [],
     sizes: ['Onesize'],
     discounted_price: 499,
@@ -479,6 +499,7 @@ let items = [
     brand: 'Kuber Industries',
     name: 'Red & Green Ethnic Motifs Printed Bed Side Runner',
     category: 'living',
+    subcategory: 'Runner',
     colors: [],
     sizes: ['Onesize'],
     discounted_price: 351,
@@ -494,6 +515,7 @@ let items = [
     brand: 'OBSESSIONS',
     name: 'Beige & Brown Ethnic MotifsRectangular Bedside Runners',
     category: 'living',
+    subcategory: 'Runner',
     colors: [],
     sizes: ['Onesize'],
     discounted_price: 2975,
@@ -512,6 +534,7 @@ let items = [
     brand: 'Marks & Spencer',
     name: 'Navy Blue Solid 230 TC Double King Cotton Bedsheet',
     category: 'living',
+    subcategory: 'Bedsheet',
     colors: [],
     sizes: ['Double King'],
     company : 'MARKS AND SPENCER RELIANCE INDIA PRIVATE LIMITED',
@@ -531,6 +554,7 @@ let items = [
     brand: 'Dreamscape',
     name: 'Blue Ethnic 144 TC Cotton 1 Queen Bedsheet with 2 Reversible Pillow Covers',
     category: 'living',
+    subcategory: 'Bedsheet with Pillow',
     colors: [],
     sizes: ['Double Queen'],
     discounted_price: 539,
@@ -550,6 +574,7 @@ let items = [
     brand: 'Jockey',
     name: 'Pack Of 2 Cotton Terry Ultrasoft and Durable Solid Hand Towel-T201',
     category: 'living',
+    subcategory: 'Towel',
     colors: [
       {
         id : '026',
@@ -574,6 +599,7 @@ let items = [
     brand: 'Jockey',
     name: 'Pack Of 2 Cotton Terry Ultrasoft and Durable Solid Hand Towel-T201',
     category: 'living',
+    subcategory: 'Towel',
     colors: [
       {
         id : '025',
