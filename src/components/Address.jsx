@@ -96,7 +96,7 @@ const Address = () => {
           </form>
         </div>
       </div>
-      <div className="bag-right-block p-4 md:visible hidden">
+      <div className="bag-right-block p-4 md:block hidden">
         <PriceDetails />
       </div>
     </div>
