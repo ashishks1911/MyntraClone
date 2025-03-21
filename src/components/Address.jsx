@@ -28,6 +28,7 @@ const Address = () => {
             <div className='mt-3 relative'>
               <input type="text" id='address' className='peer box-border w-full px-2 py-3 text-gray-500 border-gray-300 border rounded focus:outline-none' />
               <label htmlFor="address" className=' block absolute px-1 top-3 left-2 peer-focus:top-[-0.5rem] peer-focus:pb-1 peer-focus:text-gray-700 bg-white text-gray-400 text-xs'>Address (House No, Building, Street, Area)*</label>
+              <span className='text-xs text-yellow-500'>*Please update flat/house no and society/apartment details</span>
             </div>
             <div className='mt-3 relative'>
               <input type="text" id='locality' className='peer box-border w-full px-2 py-3 text-gray-500 border-gray-300 border rounded focus:outline-none' />
