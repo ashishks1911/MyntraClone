@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useOutletContext } from "react-router-dom";
-import BagOffers from "../components/BagOffers";
-import BagItem from "../components/BagItem";
-import EmptyBag from "../components/EmptyBag";
-import BagRightSide from "../components/BagRightSide";
+import BagOffers from "../bag/BagOffers";
+import BagItem from "../bag/BagItem";
+import EmptyBag from "../bag/EmptyBag";
+import BagRightSide from "../bag/BagRightSide";
 
 const Bag = () => {
   const { bagItems } = useOutletContext();

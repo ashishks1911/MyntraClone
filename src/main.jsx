@@ -5,11 +5,12 @@ import App from './routes/App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Home from './routes/Home.jsx'
-import ItemDetails from './components/ItemDetails.jsx'
+import ItemDetails from './item/ItemDetails.jsx'
 import Bag from './routes/Bag.jsx'
-import WishList from './components/WishList.jsx'
+import WishList from './routes/WishList.jsx'
 import ItemList from './routes/ItemList.jsx'
 import MobileCarousel from './components/MobileCarousel.jsx'
+import Address from './components/Address.jsx'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/test', element: <MobileCarousel />
+      }, {
+        path: '/checkout/address',
+        element: <Address />
       }
     ]
   },

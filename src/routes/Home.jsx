@@ -1,6 +1,6 @@
 import React from 'react'
 import items from '../items'
-import ItemContainer from '../components/ItemContainer'
+import ItemContainer from '../item/ItemContainer'
 
 const Home = () => {
   return (

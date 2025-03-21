@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import MobileCarousel from './MobileCarousel';
+import MobileCarousel from '../components/MobileCarousel.jsx';
 
 const ImageContainer = ({ images }) => {
 

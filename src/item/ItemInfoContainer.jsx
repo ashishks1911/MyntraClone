@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import BagOffers from "../components/BagOffers";
-import WishListBagBtn from './WishListBagBtn';
+import BagOffers from "../bag/BagOffers";
+import WishListBagBtn from '../components/WishListBagBtn';
 import SelectSize from './SelectSize';
 
 
@@ -75,7 +75,8 @@ const ItemInfo = ({ item }) => {
           <div>
             <span className="font-bold mr-2">&#8377;{item.discounted_price}</span>
             <span className="ine-through mr-2">MRP &#8377;{item.original_price}</span>
-            <span className="text-red-500">({item.discount}% OFF)</span>
+            {item.discount_percentage !==0 && <span className="text-red-500">{item.discount_percentage}% OFF</span>}
+            {item.discount_mrp !==0 && <span className="text-red-500">(₹{item.discount_mrp} OFF)</span>}
           </div>
           <div className='pb-3'>
             Seller : <span className='font-bold text-red-500'>{item.company}</span>
