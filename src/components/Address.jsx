@@ -75,8 +75,15 @@ const Address = () => {
               <label htmlFor="defaultAddress" className='px-2 text-gray-700'>Make this as my default address</label>
             </div>
 
-            <div>
-              
+            <div className='mt-3'>
+              <div className='flex gap-2'>
+                <button type="button" className=" py-2 flex-1 border border-gray-300 text-lg font-bold rounded-md" >
+                  <span>Cancel</span>
+                </button>
+                <button type="button" className="bg-[#ff3e6c] text-white text-lg flex-1 font-bold py-2 rounded-md">
+                  <span>Save</span>
+                </button>
+              </div>
             </div>
 
           </form>
