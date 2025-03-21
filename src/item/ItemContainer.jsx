@@ -33,7 +33,7 @@ const ItemContainer = ({ item }) => {
         <div className="item-price">
           <span className="discounted-price">₹ {item.discounted_price}</span>
           <span className="original-price">Rs. {item.original_price}</span>
-          <span className="discount">({item.discount_percentage == 0 ? `₹${item.discount_mrp}` : `${item.discount_percentage} % FF`})</span>
+          <span className="discount">{item.discount_percentage == 0 ? `${item.discount_mrp !== 0 ? `(₹${item.discount_mrp})` : ''}` : `(${item.discount_percentage} % FF)`}</span>
         </div>
       </div>
     </div>
