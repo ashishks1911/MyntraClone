@@ -9,7 +9,7 @@ const ItemContainer = ({ item }) => {
   }
 
   return (
-    <div className="item-container md:w-[200px] w-[160px] group" onClick={() => handleItemClick(item.id)}>
+    <div className="item-container md:w-[200px] w-[168px] group" onClick={() => handleItemClick(item.id)}>
       <div className='relative'>
         <img className="item-image" src={item.src} alt="" />
         {

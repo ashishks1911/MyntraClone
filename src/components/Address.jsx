@@ -1,10 +1,16 @@
-import React, { useState } from 'react'
+import React, { use, useState } from 'react'
 import PriceDetails from '../bag/PriceDetails'
+import { fetchCityAndDistrict } from '../utils/ApiFunctions';
 
 const Address = () => {
   const [addressType, setAddressType] = useState('');
   const handleOptionChange = (e) => {
     setAddressType(e.target.value);
+  }
+  const [pincode, setPincode] = useState();
+  const handlePinCode = (e) => {
+    let val = e.target.value;
+    fetchCityAndDistrict(val);
   }
   return (
     <div className="bag-container md:grid md:p-3 mt-12 md:w-[70%]">
@@ -22,7 +28,7 @@ const Address = () => {
             </div>
             <h3 className='text-xs font-bold uppercase mt-5'>Address</h3>
             <div className='mt-3 relative'>
-              <input type="text" id='pincode' className='peer box-border w-full px-2 py-3 text-gray-500 border-gray-300 border rounded focus:outline-none' />
+              <input type="text" id='pincode' className='peer box-border w-full px-2 py-3 text-gray-500 border-gray-300 border rounded focus:outline-none' onChange={handlePinCode} />
               <label htmlFor="pincode" className=' block absolute px-1 top-3 left-2 peer-focus:top-[-0.5rem] peer-focus:pb-1 bg-white peer-focus:text-gray-700 text-gray-400 text-xs'>Pin Code*</label>
             </div>
             <div className='mt-3 relative'>
@@ -78,10 +84,10 @@ const Address = () => {
 
             <div className='mt-3'>
               <div className='flex gap-2'>
-                <button type="button" className=" py-2 flex-1 border border-gray-300 text-lg font-bold rounded-md" >
+                <button type="button" className=" py-2 flex-1 border border-gray-300 text-lg font-semibold rounded-md">
                   <span>Cancel</span>
                 </button>
-                <button type="button" className="bg-[#ff3e6c] text-white text-lg flex-1 font-bold py-2 rounded-md">
+                <button type="submit" className="bg-[#ff3e6c] text-white text-lg flex-1 font-semibold py-2 rounded-md">
                   <span>Save</span>
                 </button>
               </div>

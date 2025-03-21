@@ -9,13 +9,11 @@ const ItemList = () => {
   const itemList = items.filter((item) => item.category === category);
   console.log(itemList);
   return (
-    <main>
-      <div className='items-container'>
-        {itemList.map((item) => (
-          <ItemContainer key={item.id} item={item} />
-        ))}
-      </div>
-    </main>
+    <div className='items-container md:w-[80%] w-full justify-center md:justify-start'>
+      {itemList.map((item) => (
+        <ItemContainer key={item.id} item={item} />
+      ))}
+    </div>
   )
 }
 

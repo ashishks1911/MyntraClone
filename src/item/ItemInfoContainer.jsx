@@ -42,7 +42,7 @@ const ItemInfo = ({ item }) => {
         }
 
         {
-          item.discount_percentage != 0 && <span className="item-details-discount md:text-xl order-1">({item.discount_percentage} % OFF)</span>
+          item.discount_percentage != 0 && <span className="item-details-discount md:text-xl order-3">({item.discount_percentage} % OFF)</span>
         }
         {
           item.discount_mrp != 0 && <span className="item-details-discount md:text-xl order-3">(Rs. {item.discount_mrp} OFF)</span>
