@@ -14,7 +14,7 @@ const Address = () => {
   }
   return (
     <div className="bag-container md:grid md:p-3 mt-12 md:w-[70%]">
-      <div className="bag-left-block pt-10 px-24">
+      <div className="bag-left-block pt-10 md:px-24 px-4">
         <div className="p-4 py-8 border rounded bg-white text-sm text-bold">
           <form >
             <h3 className='text-xs font-bold uppercase mt-5'>Contact Details</h3>
@@ -82,7 +82,7 @@ const Address = () => {
               <label htmlFor="defaultAddress" className='px-2 text-gray-700'>Make this as my default address</label>
             </div>
 
-            <div className='mt-3'>
+            <div className='mt-3 fixed inset-x-0 w-full md:static bottom-0 z-30 p-2 bg-white'>
               <div className='flex gap-2'>
                 <button type="button" className=" py-2 flex-1 border border-gray-300 text-lg font-semibold rounded-md">
                   <span>Cancel</span>
@@ -96,7 +96,7 @@ const Address = () => {
           </form>
         </div>
       </div>
-      <div className="bag-right-block p-4">
+      <div className="bag-right-block p-4 md:visible hidden">
         <PriceDetails />
       </div>
     </div>
