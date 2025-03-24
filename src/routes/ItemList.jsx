@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import items from '../items'
-import ItemContainer from '../item/ItemContainer';
+const ItemContainer = lazy(() =>import('../item/ItemContainer'));
 import { useParams } from 'react-router-dom';
 
 const ItemList = () => {

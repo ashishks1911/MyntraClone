@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaRegHeart } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 const ItemContainer = ({ item }) => {
@@ -11,7 +12,7 @@ const ItemContainer = ({ item }) => {
   return (
     <div className="item-container md:w-[200px] w-[168px] group" onClick={() => handleItemClick(item.id)}>
       <div className='relative'>
-        <img className="item-image" src={item.src} alt="" />
+        <img className="item-image block aspect-3/2" src={item.src} alt="" loading='lazy'/>
         {
           item.rating != null && <div className="item-rating">
             {item.rating.stars} <i className="fa-solid fa-star review-star-icon"></i>  |  {item.rating.noOfReviews}
@@ -21,9 +22,7 @@ const ItemContainer = ({ item }) => {
       </div>
       <div className="item-actions hidden md:group-hover:flex">
         <span className="item-wishlist">
-          <span className="material-symbols-outlined item-wishlist-icon">
-            favorite
-          </span>
+          <FaRegHeart className='item-wishlist-icon' />
           <span>Wishlist</span>
         </span>
       </div>

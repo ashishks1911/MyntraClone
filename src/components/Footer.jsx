@@ -39,9 +39,9 @@ const Footer = () => {
         <div className="app-download md:px-1 px-12">
           <div className='md:block hidden'>
             <p className="info-title">Experience myntra app on mobile</p>
-            <div className="download">
+            <div className="flex gap-1">
               <div>
-                <img src="/google-play-store.webp" alt="" />
+                <img src="/google-play-store.webp" alt="" className='w-full'/>
               </div>
               <div>
                 <img src="/app-store.png" alt="" />

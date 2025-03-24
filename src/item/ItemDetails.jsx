@@ -15,7 +15,7 @@ const ItemDetails = () => {
   return (
     <div>
       <BreadCrumb item={item} />
-      <div className='item-details-container md:grid md:w-[96%]'>
+      <div className='item-details-container flex flex-col md:grid md:w-[96%]'>
         <ImageContainer images={item.img} />
         <ItemInfo item={item} />
       </div>

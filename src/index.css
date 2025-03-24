@@ -21,12 +21,11 @@ header {
   align-items: center;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05);
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   background-color: #fff;
-  margin-bottom: 100px;
 }
 
 .logo-container {
@@ -166,9 +165,7 @@ footer {
   width: 16%;
 }
 
-.download {
-  display: flex;
-}
+
 
 .app-download {
   width: 345px;
@@ -233,7 +230,7 @@ footer {
 
 /* ------------------------------------- Main section --------------------------- */
 main {
-  margin-top: 80px;
+  margin-top: 5px;
   width: 100%;
 }
 

@@ -4,13 +4,14 @@ import { IoPersonOutline } from 'react-icons/io5';
 import { HiBars3 } from "react-icons/hi2";
 import { SlBag } from 'react-icons/sl';
 import { Link } from 'react-router-dom';
+import { GoSearch } from "react-icons/go";
 
 const Header = () => {
   return (
     <header className='z-50 sm:h-[80px] py-3'>
       <div className="logo-container flex items-center gap-3">
         <div className='sm:hidden '>
-          <HiBars3  className='w-7 h-7 text-gray-500' />
+          <HiBars3 className='w-7 h-7 text-gray-500' />
         </div>
         <Link to="/" ><img className="sm:h-[45px] h-6" src="/myntra.svg" alt="myntra logo" /></Link>
       </div>
@@ -23,9 +24,7 @@ const Header = () => {
         <Link to="/" >studio <sup>new</sup></Link>
       </nav>
       <div className="search-bar md:flex hidden">
-        <span className="material-symbols-outlined search-icon">
-          search
-        </span>
+        <GoSearch />
         <input className="search-box" type="text" placeholder="Search for products, brands and more" />
       </div>
       <div className="actions">
