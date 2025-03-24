@@ -4,9 +4,12 @@ import BagOffers from "../bag/BagOffers";
 import BagItem from "../bag/BagItem";
 import EmptyBag from "../bag/EmptyBag";
 import BagRightSide from "../bag/BagRightSide";
+import { useSelector } from "react-redux";
 
 const Bag = () => {
-  const { bagItems } = useOutletContext();
+  // const { bagItems } = useOutletContext();
+
+  const bagItems = useSelector((store) => store.bag);
 
   if (bagItems.length == 0) {
     return <EmptyBag />

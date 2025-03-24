@@ -8,7 +8,7 @@ import { GoSearch } from "react-icons/go";
 
 const Header = () => {
   return (
-    <header className='z-50 sm:h-[80px] py-3'>
+    <header className='z-40 sm:h-[80px] py-3'>
       <div className="logo-container flex items-center gap-3">
         <div className='sm:hidden '>
           <HiBars3 className='w-7 h-7 text-gray-500' />

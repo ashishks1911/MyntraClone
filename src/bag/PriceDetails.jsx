@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux';
 import { useOutletContext } from 'react-router-dom';
-import items from '../items';
 
 const PriceDetails = () => {
 
-  const { bagItems } = useOutletContext();
+  const bagItems = useSelector((store) => store.bag);
+
+  const items = useSelector((store) => store.items);
+
 
   const [totalMRP, setTotalMRP] = useState(0);
   const [discountOnMRP, setDiscountOnMRP] = useState(0);
@@ -25,7 +28,7 @@ const PriceDetails = () => {
     let totalPrice = 0;
     let totalDiscount = 0;
     bagItems.forEach((bagItem) => {
-      const item = items.find((item) => item.id === bagItem.id);
+      const item = items.find((item) => item.id === bagItem.itemId);
       totalPrice += item.original_price * bagItem.qty;
       totalDiscount += item.discount_percentage != 0 ? (item.original_price * item.discount_percentage / 100) * bagItem.qty : item.discount_mrp * bagItem.qty;
 

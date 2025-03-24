@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import BagOffers from "../bag/BagOffers";
 import WishListBagBtn from '../components/WishListBagBtn';
 import SelectSize from './SelectSize';
+import { FaStar } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
+import { bagActions } from '../store/bagSlice';
 
 
 const ItemInfo = ({ item }) => {
@@ -15,6 +18,17 @@ const ItemInfo = ({ item }) => {
     }
   }, [size]);
 
+  const dispatch = useDispatch();
+  const handleAddToBag = () => {
+    if (size.length == 0) {
+      // size-selection-box
+      document.querySelector('.size-error-message').classList.remove('hidden');
+
+    }else{
+      dispatch(bagActions.addToBag({ itemId: item.id, size, qty: 1 }))
+    }
+
+  }
 
   return (
     <div className="item-details-description-container">
@@ -26,7 +40,7 @@ const ItemInfo = ({ item }) => {
           item.rating != null &&
           <div className="item-details-rating absolute md:relative text-xs md:text-base right-3 bottom-16 md:top-0 md:bottom-0 z-10 md:left-1 bg-white border-2 rounded-full md:rounded">
             <div className="item-overall-rating">
-              {item.rating.stars} <i className="fa-solid fa-star review-star-icon"></i>
+              {item.rating.stars} <FaStar className='review-star-icon inline-block text-green-500' />
             </div>
             <span className='px-2 text-gray-400'> | </span>
             <div className="item-rating-count">
@@ -68,15 +82,22 @@ const ItemInfo = ({ item }) => {
         <div className='md:hidden block px-3 py-8'>
           <BagOffers />
         </div>
-        <SelectSize sizes = {item.sizes} size={size} setSize={setSize} />
+        <SelectSize sizes={item.sizes} size={size} setSize={setSize} />
+        <div className='size-selection-box md:hidden fixed inset-x-0 bottom-0 z-50 bg-white py-3 hidden'>
+          
+          <SelectSize sizes={item.sizes} size={size} setSize={setSize} />
+          <div className='flex justify-center'>
+            <button type="button" className="bag-btn-container px-12 py-3" onClick={handleAddToBag}>Done</button>
+          </div>
+        </div>
         <WishListBagBtn itemId={item.id} size={size} setSize={setSize} />
         <div className='seller-info p-3 mt-5 hidden'>
           <hr className='py-1' />
           <div>
             <span className="font-bold mr-2">&#8377;{item.discounted_price}</span>
             <span className="ine-through mr-2">MRP &#8377;{item.original_price}</span>
-            {item.discount_percentage !==0 && <span className="text-red-500">{item.discount_percentage}% OFF</span>}
-            {item.discount_mrp !==0 && <span className="text-red-500">(₹{item.discount_mrp} OFF)</span>}
+            {item.discount_percentage !== 0 && <span className="text-red-500">{item.discount_percentage}% OFF</span>}
+            {item.discount_mrp !== 0 && <span className="text-red-500">(₹{item.discount_mrp} OFF)</span>}
           </div>
           <div className='pb-3'>
             Seller : <span className='font-bold text-red-500'>{item.company}</span>

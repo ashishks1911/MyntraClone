@@ -1,14 +1,15 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import items from '../items.js'
 import BreadCrumb from './BreadCrumb.jsx';
 import ImageContainer from './ImageContainer';
 import ItemInfo from './ItemInfoContainer';
+import { useSelector } from 'react-redux';
 
 const ItemDetails = () => {
 
   const { itemId } = useParams();
   console.log(itemId);
+  const items = useSelector((store)=>store.items);
 
   const item = items.find((item) => item.id === itemId);
 

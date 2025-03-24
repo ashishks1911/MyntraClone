@@ -1,4 +1,4 @@
-let items = [
+export const DEFAULT_ITEMS = [
   {
     id: '001',
     src: '/products/women/1.jpg',
@@ -619,5 +619,3 @@ let items = [
 
 
 ]
-
-export default items;

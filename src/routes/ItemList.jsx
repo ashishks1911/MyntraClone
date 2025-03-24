@@ -1,10 +1,12 @@
 import React, { lazy } from 'react'
-import items from '../items'
-const ItemContainer = lazy(() =>import('../item/ItemContainer'));
+import { useSelector } from 'react-redux';
+const ItemContainer = lazy(() => import('../item/ItemContainer'));
 import { useParams } from 'react-router-dom';
 
 const ItemList = () => {
   const { category } = useParams();
+
+  const items = useSelector((store) => store.items);
 
   const itemList = (typeof category !== 'undefined') ? items.filter((item) => item.category === category) : items;
   return (

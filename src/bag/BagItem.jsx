@@ -1,15 +1,16 @@
-import React from 'react'
-import items from '../items'
-import { useOutletContext } from 'react-router-dom';
+import React from 'react'  
+import { useDispatch, useSelector } from 'react-redux';
+import { bagActions } from '../store/bagSlice';
 
 const BagItem = ({ bagItem }) => {
-  const { setBagItems } = useOutletContext();
 
-  let item = items.find((item) => item.id === bagItem.id);
-  const handleRemoveItem = () => {
-    setBagItems((bagItems) => bagItems.filter((item) => item.id !== bagItem.id || item.size !== bagItem.size));
+  const items = useSelector((store) => store.items);
+  const dispatch = useDispatch();
+  const item = items.find((item) => item.id === bagItem.itemId);
+  const handleRemoveItem = () =>{
+    dispatch(bagActions.removeFromBag(bagItem.itemId));
   }
-  
+
 
   return (
     <div className='w-full flex px-2 py-2.5 border rounded'>
