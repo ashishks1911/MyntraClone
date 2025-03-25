@@ -1,15 +1,16 @@
-import React from 'react'  
-import { useDispatch, useSelector } from 'react-redux';
-import { bagActions } from '../store/bagSlice';
+import React, { useState } from 'react'
+import { useSelector } from 'react-redux';
+import RemoveItemDialog from './RemoveItemDialog';
 
 const BagItem = ({ bagItem }) => {
 
   const items = useSelector((store) => store.items);
-  const dispatch = useDispatch();
   const item = items.find((item) => item.id === bagItem.itemId);
-  const handleRemoveItem = () =>{
-    dispatch(bagActions.removeFromBag(bagItem.itemId));
-  }
+  const [showDialog, setShowDialog] = useState(false);
+  // const handleRemoveItem = () => {
+  //   document.querySelector('#dialog').classList.remove('hidden');
+
+  // }
 
 
   return (
@@ -33,7 +34,7 @@ const BagItem = ({ bagItem }) => {
               <svg xmlns="http://www.w3.org/2000/svg" width="6" height="3" viewBox="0 0 6 3" className="itemComponents-base-dropDown"><path fillRule="evenodd" d="M0 0h6L3 3z"></path></svg>
             </div>
           </div>
-          <div className='base-quantity block bg-[#f5f5f6] font-bold px-3 cursor-pointer flex items-center'>
+          <div className='base-quantity bg-[#f5f5f6] font-bold px-3 cursor-pointer flex items-center'>
             <span>Qty : {bagItem.qty} </span>
             <div className='pl-2'>
               <svg xmlns="http://www.w3.org/2000/svg" width="6" height="3" viewBox="0 0 6 3" className="itemComponents-base-dropDown"><path fillRule="evenodd" d="M0 0h6L3 3z"></path></svg>
@@ -52,10 +53,13 @@ const BagItem = ({ bagItem }) => {
         </div>
       </div>
       <div className='float-right text-xs'>
-        <div className='cursor-pointer' onClick={handleRemoveItem}>
+        <div className='cursor-pointer' onClick={() => setShowDialog(true)}>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" className="w-3 h-3"><path fill="#000" fillRule="evenodd" d="M9.031 8l6.756-6.756a.731.731 0 0 0 0-1.031.732.732 0 0 0-1.031 0L8 6.969 1.244.213a.732.732 0 0 0-1.031 0 .731.731 0 0 0 0 1.03L6.969 8 .213 14.756a.731.731 0 0 0 0 1.031.732.732 0 0 0 1.031 0L8 9.031l6.756 6.756a.732.732 0 0 0 1.031 0 .731.731 0 0 0 0-1.03L9.031 8z" ></path></svg>
         </div>
       </div>
+      {
+        showDialog && <RemoveItemDialog item={bagItem} img={item.src} setShowDialog={setShowDialog} />
+      }
     </div>
   )
 }

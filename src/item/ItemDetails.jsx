@@ -8,7 +8,6 @@ import { useSelector } from 'react-redux';
 const ItemDetails = () => {
 
   const { itemId } = useParams();
-  console.log(itemId);
   const items = useSelector((store)=>store.items);
 
   const item = items.find((item) => item.id === itemId);

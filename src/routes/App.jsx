@@ -6,6 +6,7 @@ import { ToastContainer } from 'react-toastify';
 
 import { Outlet } from 'react-router-dom'
 import { useSelector } from 'react-redux';
+import RemoveItemDialog from '../bag/RemoveItemDialog'
 
 function App() {
 
@@ -22,7 +23,6 @@ function App() {
       bag.classList.add('flex');
       bag.innerHTML = bagItems.length;
     }
-    console.log(bagItems);
   }, [bagItems]);
 
 
