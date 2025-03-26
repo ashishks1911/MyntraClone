@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 import RemoveItemDialog from './RemoveItemDialog';
+import SelectSizeDialog from './SelectSizeDialog';
+import ItemQuantityDialog from './ItemQuantityDialog';
 
 const BagItem = ({ bagItem }) => {
 
   const items = useSelector((store) => store.items);
   const item = items.find((item) => item.id === bagItem.itemId);
   const [showDialog, setShowDialog] = useState(false);
+  const [showSizeDialog, setShowSizeDialog] = useState(false);
+  const [showQuantityDialog, setShowQuantityDialog] = useState(false);
   // const handleRemoveItem = () => {
   //   document.querySelector('#dialog').classList.remove('hidden');
 
@@ -29,16 +33,20 @@ const BagItem = ({ bagItem }) => {
         <span className='text-xs text-gray-400'>Sold by : {item.company}</span>
         <div className='flex gap-2 py-2'>
           <div className='base-size bg-[#f5f5f6] font-bold px-3 cursor-pointer flex items-center'>
-            <span>Size : {bagItem.size}</span>
+            <button onClick={() => setShowSizeDialog(true)}>Size : {bagItem.size}</button>
             <div className='pl-2'>
               <svg xmlns="http://www.w3.org/2000/svg" width="6" height="3" viewBox="0 0 6 3" className="itemComponents-base-dropDown"><path fillRule="evenodd" d="M0 0h6L3 3z"></path></svg>
             </div>
+            {
+              showSizeDialog && <SelectSizeDialog item={item} setShowSizeDialog={setShowSizeDialog} />
+            }
           </div>
           <div className='base-quantity bg-[#f5f5f6] font-bold px-3 cursor-pointer flex items-center'>
-            <span>Qty : {bagItem.qty} </span>
+            <button onClick={() => setShowQuantityDialog(true)}>Qty : {bagItem.qty} </button>
             <div className='pl-2'>
               <svg xmlns="http://www.w3.org/2000/svg" width="6" height="3" viewBox="0 0 6 3" className="itemComponents-base-dropDown"><path fillRule="evenodd" d="M0 0h6L3 3z"></path></svg>
             </div>
+            {showQuantityDialog && <ItemQuantityDialog setShowQuantityDialog={setShowQuantityDialog} />}
           </div>
         </div>
 

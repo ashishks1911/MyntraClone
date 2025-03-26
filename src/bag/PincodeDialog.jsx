@@ -20,7 +20,7 @@ const PincodeDialog = ({ setPincodeDialog }) => {
   return (
     <div className='fixed inset-x-0 inset-y-0 bg-black bg-opacity-60 z-50'>
       <div className='flex justify-center items-center h-full'>
-        <div className='w-[28rem] h-64 bg-white rounded'>
+        <div className='w-[28rem] h-64 bg-white rounded mx-2'>
           <div className='flex justify-between px-5 py-4'>
             <h1 className='font-bold'>Enter Delivery Details</h1>
             <div className='cursor-pointer' onClick={() => setPincodeDialog(false)}>
