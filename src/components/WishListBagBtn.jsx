@@ -3,6 +3,7 @@ import { FaRegHeart } from 'react-icons/fa'
 import { SlBag } from 'react-icons/sl'
 import { useDispatch } from 'react-redux';
 import { bagActions } from '../store/bagSlice';
+import { sizeDialogActions } from '../store/sizeDialog';
 
 const WishListBagBtn = ({ itemId, size, setSize }) => {
 
@@ -29,8 +30,8 @@ const WishListBagBtn = ({ itemId, size, setSize }) => {
   const handleAddToBag = (itemId) => {
     const qty = 1;
     if (size.length == 0) {
+      dispatch(sizeDialogActions.setDialogShow(true));
       document.querySelector('.size-error-message').classList.remove('hidden');
-      document.querySelector('.size-selection-box').classList.remove('hidden');
 
     } else {
       dispatch(bagActions.addToBag({itemId, size, qty}))

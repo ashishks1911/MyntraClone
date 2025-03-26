@@ -1,12 +1,14 @@
-import {configureStore} from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import itemsSlice from './itemsSlice';
 import bagSlice from './bagSlice';
+import sizeDialog from './sizeDialog';
 
 
 const store = configureStore({
-  reducer : {
-    items : itemsSlice.reducer,
-    bag : bagSlice.reducer
+  reducer: {
+    items: itemsSlice.reducer,
+    bag: bagSlice.reducer,
+    sizeDialog: sizeDialog.reducer
   }
 })
 

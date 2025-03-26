@@ -5,12 +5,13 @@ import BagItem from "../bag/BagItem";
 import EmptyBag from "../bag/EmptyBag";
 import BagRightSide from "../bag/BagRightSide";
 import { useSelector } from "react-redux";
+import PincodeDialog from "../bag/PincodeDialog";
 
 const Bag = () => {
   // const { bagItems } = useOutletContext();
 
   const bagItems = useSelector((store) => store.bag);
-
+  const [pincodeDialog, setPincodeDialog] = useState();
   if (bagItems.length == 0) {
     return <EmptyBag />
   }
@@ -20,10 +21,11 @@ const Bag = () => {
       <div className="bag-left-block pt-10 p-5">
         <div className="flex px-4 py-4 items-center justify-between border rounded bg-[#fff6f4] text-sm text-bold">
           <h2 className="font-bold">Check Delivery Time & Services</h2>
-          <button className="text-red-500 border border-red-500 roundeyd md:px-5 px-3 py-2 text-center text-xs font-bold uppercase">
+          <button className="text-red-500 border border-red-500 roundeyd md:px-5 px-3 py-2 text-center text-xs font-bold uppercase" onClick={() => setPincodeDialog(true)}>
             Enter pin code
           </button>
         </div>
+        {pincodeDialog && <PincodeDialog setPincodeDialog={setPincodeDialog} />}
         <BagOffers />
         <div className="bulk-action flex justify-between md:p-5 pt-4 items-center">
           <div className="flex items-center">

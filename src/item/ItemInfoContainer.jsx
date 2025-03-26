@@ -4,13 +4,15 @@ import BagOffers from "../bag/BagOffers";
 import WishListBagBtn from '../components/WishListBagBtn';
 import SelectSize from './SelectSize';
 import { FaStar } from 'react-icons/fa';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { bagActions } from '../store/bagSlice';
+import { sizeDialogActions } from '../store/sizeDialog';
 
 
 const ItemInfo = ({ item }) => {
 
   const [size, setSize] = useState('');
+  const showSelectSize = useSelector((store) => store.sizeDialog);
 
   useEffect(() => {
     if (size.length != 0) {
@@ -22,10 +24,11 @@ const ItemInfo = ({ item }) => {
   const handleAddToBag = () => {
     if (size.length == 0) {
       // size-selection-box
-      document.querySelector('.size-error-message').classList.remove('hidden');
-
-    }else{
+      document.querySelector('.size-selection-box').querySelector('.size-error-message').classList.remove('hidden');
+    } else {
       dispatch(bagActions.addToBag({ itemId: item.id, size, qty: 1 }))
+      dispatch(sizeDialogActions.setDialogShow(false));
+      setSize('');
     }
 
   }
@@ -83,13 +86,18 @@ const ItemInfo = ({ item }) => {
           <BagOffers />
         </div>
         <SelectSize sizes={item.sizes} size={size} setSize={setSize} />
-        <div className='size-selection-box md:hidden fixed inset-x-0 bottom-0 z-50 bg-white py-3 hidden'>
-          
-          <SelectSize sizes={item.sizes} size={size} setSize={setSize} />
-          <div className='flex justify-center'>
-            <button type="button" className="bag-btn-container px-12 py-3" onClick={handleAddToBag}>Done</button>
+        {
+          showSelectSize &&
+          <div className='fixed bg-black bg-opacity-60 inset-x-0 inset-y-0 z-40'>
+            <div className='size-selection-box md:hidden fixed inset-x-0 bottom-0 z-50 bg-white py-3'>
+              <SelectSize sizes={item.sizes} size={size} setSize={setSize} />
+              <div className='flex justify-center'>
+                <button type="button" className="bag-btn-container px-12 py-3" onClick={handleAddToBag}>Done</button>
+              </div>
+            </div>
           </div>
-        </div>
+        }
+
         <WishListBagBtn itemId={item.id} size={size} setSize={setSize} />
         <div className='seller-info p-3 mt-5 hidden'>
           <hr className='py-1' />

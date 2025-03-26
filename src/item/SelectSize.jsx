@@ -12,7 +12,7 @@ const SelectSize = ({sizes, setSize}) => {
         </span>
       </div>
       <div className='size-error-message mt-5 hidden'>
-        <span className='text-red-500'>Please Select a size</span>
+        <span className='text-red-500 pl-3'>Please Select a size</span>
       </div>
 
       <div className="size-buttons-size-buttons md:flex-wrap md:w-full w-[24rem] overflow-x-auto nowrap mx-auto py-4 md:mx-0">
