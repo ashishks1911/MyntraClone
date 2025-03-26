@@ -4,12 +4,18 @@ import { fetchCityAndDistrict } from '../utils/ApiFunctions';
 
 const Address = () => {
   const [addressType, setAddressType] = useState('');
+  const [name, setName] = useState('');
+  const [mobile, setMobile] = useState('');
+  const [address, setAddress] = useState('');
+  const [locality, setLocality] = useState('');
+
   const handleOptionChange = (e) => {
     setAddressType(e.target.value);
   }
-  const [pincode, setPincode] = useState();
+  const [pincode, setPincode] = useState('');
   const handlePinCode = (e) => {
     let val = e.target.value;
+    setPincode(val);
     fetchCityAndDistrict(val);
   }
   return (
@@ -19,21 +25,21 @@ const Address = () => {
           <form >
             <h3 className='text-xs font-bold uppercase mt-5'>Contact Details</h3>
             <div className='mt-3 relative'>
-              <input type="text" id='name' className='peer box-border w-full px-2 py-3 text-gray-500 border-gray-300 border rounded focus:outline-none z-20' />
-              <label htmlFor="name" className=' block absolute px-1 top-3 left-2 peer-focus:top-[-0.5rem] peer-focus:pb-1 bg-white peer-focus:text-gray-700 text-gray-400 text-xs'>Name*</label>
+              <input type="text" id='name' className='peer box-border w-full px-2 py-3 text-gray-500 border-gray-300 border rounded focus:outline-none z-20' onChange={(e) => setName(e.target.value)} />
+              <label htmlFor="name" className={`block absolute px-1 top-3 left-2 ${name.length != 0 ? 'top-[-0.5rem]' : ' peer-focus:top-[-0.5rem]'} peer-focus:pb-1 bg-white peer-focus:text-gray-700 text-gray-400 text-xs`}>Name*</label>
             </div>
             <div className='mt-3 relative flex'>
-              <input type="text" id='phone' className='peer box-border w-full px-2 py-3 text-gray-500 border-gray-300 border rounded focus:outline-none' />
-              <label htmlFor="phone" className=' block absolute px-1 top-3 left-2 peer-focus:top-[-0.5rem] peer-focus:pb-1 bg-white peer-focus:text-gray-700 text-gray-400 text-xs '>Mobile No*</label>
+              <input type="text" id='phone' className='peer box-border w-full px-2 py-3 text-gray-500 border-gray-300 border rounded focus:outline-none' onClick={(e) => setMobile(e.target.value)} />
+              <label htmlFor="phone" className={`block absolute px-1 top-3 left-2 ${mobile.length != 0 ? 'top-[-0.5rem]' : 'peer-focus:top-[-0.5rem]'} peer-focus:pb-1 bg-white peer-focus:text-gray-700 text-gray-400 text-xs`}>Mobile No*</label>
             </div>
             <h3 className='text-xs font-bold uppercase mt-5'>Address</h3>
             <div className='mt-3 relative'>
               <input type="text" id='pincode' className='peer box-border w-full px-2 py-3 text-gray-500 border-gray-300 border rounded focus:outline-none' onChange={handlePinCode} />
-              <label htmlFor="pincode" className=' block absolute px-1 top-3 left-2 peer-focus:top-[-0.5rem] peer-focus:pb-1 bg-white peer-focus:text-gray-700 text-gray-400 text-xs'>Pin Code*</label>
+              <label htmlFor="pincode" className={` block absolute px-1 top-3 left-2 ${pincode.length !== 0 ? 'top-[-0.5rem]' : 'peer-focus:top-[-0.5rem]'}  peer-focus:pb-1 bg-white peer-focus:text-gray-700 text-gray-400 text-xs`}>Pin Code*</label>
             </div>
             <div className='mt-3 relative'>
-              <input type="text" id='address' className='peer box-border w-full px-2 py-3 text-gray-500 border-gray-300 border rounded focus:outline-none' />
-              <label htmlFor="address" className=' block absolute px-1 top-3 left-2 peer-focus:top-[-0.5rem] peer-focus:pb-1 peer-focus:text-gray-700 bg-white text-gray-400 text-xs'>Address (House No, Building, Street, Area)*</label>
+              <input type="text" id='address' className='peer box-border w-full px-2 py-3 text-gray-500 border-gray-300 border rounded focus:outline-none' onChange={(e) => setAddress(e.target.value)} />
+              <label htmlFor="address" className={` block absolute px-1 top-3 left-2 ${address.length != 0 ? 'top-[-0.5rem]' : 'peer-focus:top-[-0.5rem]'} peer-focus:pb-1 peer-focus:text-gray-700 bg-white text-gray-400 text-xs`}>Address (House No, Building, Street, Area)*</label>
               <span className='text-xs text-yellow-500'>*Please update flat/house no and society/apartment details</span>
             </div>
             <div className='mt-3 relative'>
