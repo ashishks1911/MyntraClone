@@ -5,7 +5,7 @@ const ItemQuantityDialog = ({ setShowQuantityDialog }) => {
   return (
     <div className='fixed inset-x-0 inset-y-0 bg-black bg-opacity-60 z-50'>
       <div className='flex justify-center items-center h-full'>
-        <div className=' bg-white w-[25rem] p-4'>
+        <div className=' bg-white w-[25rem] p-4 m-3'>
           <div className='flex justify-between text-lg'>
             <h2>Select Qunatity</h2>
             <div className='cursor-pointer' onClick={() => setShowQuantityDialog(false)}>
