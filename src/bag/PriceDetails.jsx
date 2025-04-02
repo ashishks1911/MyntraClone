@@ -21,6 +21,8 @@ const PriceDetails = () => {
   const dispatch =  useDispatch();
 
   useEffect(() => {
+    dispatch(checkoutActions.setCheckoutItems(bagItems));
+    
     if (bagItems.length == 0) {
       setTotalMRP(0)
       setDiscountOnMRP(0);
@@ -31,10 +33,8 @@ const PriceDetails = () => {
     }
     let totalPrice = 0;
     let totalDiscount = 0;
-    const tempItems = [];
     bagItems.forEach((bagItem) => {
       if (bagItem.checked) {
-        tempItems.push(bagItem.itemId);
         const item = items.find((item) => item.id === bagItem.itemId);
         totalPrice += item.original_price * bagItem.qty;
         if(totalPrice%10){
@@ -44,7 +44,6 @@ const PriceDetails = () => {
       }
     });
 
-    dispatch(checkoutActions.setCheckoutItems(tempItems));
     setTotalMRP(totalPrice);
     setDiscountOnMRP(Math.floor(totalDiscount));
     setPlatformFee(0);

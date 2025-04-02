@@ -20,13 +20,12 @@ const BagItem = ({ bagItem }) => {
     dispatch(bagActions.isChecked({ id, size: bagItem.size, checked }));
   }
 
-
   return (
     <div className='w-full flex px-2 py-2.5 border rounded'>
       <div className='bag-item-left'>
         <div className='w-32 relative'>
           <div className='absolute left-1 top-1'>
-            <input type="checkbox" onChange={handleCheckboxClick} name={item.id} id={item.id} defaultChecked className='w-4 h-4' />
+            <input type="checkbox" onChange={handleCheckboxClick} name={item.id} id={item.id} checked={bagItem.checked} className='w-4 h-4' />
           </div>
           <img src={item.src} alt="" className='w-full' />
         </div>

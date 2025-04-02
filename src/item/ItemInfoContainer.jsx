@@ -88,8 +88,8 @@ const ItemInfo = ({ item }) => {
         <SelectSize sizes={item.sizes} size={size} setSize={setSize} />
         {
           showSelectSize &&
-          <div className='fixed bg-black bg-opacity-60 inset-x-0 inset-y-0 z-40'>
-            <div className='size-selection-box md:hidden fixed inset-x-0 bottom-0 z-50 bg-white py-3'>
+          <div className='fixed bg-black bg-opacity-60 inset-x-0 inset-y-0 z-40 md:hidden'>
+            <div className='size-selection-box fixed inset-x-0 bottom-0 z-50 bg-white py-3'>
               <SelectSize sizes={item.sizes} size={size} setSize={setSize} />
               <div className='flex justify-center'>
                 <button type="button" className="bag-btn-container px-12 py-3" onClick={handleAddToBag}>Done</button>

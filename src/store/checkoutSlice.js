@@ -5,7 +5,7 @@ const checkoutSlice = createSlice({
   initialState: [],
   reducers: {
     setCheckoutItems: (state, action) => {
-      return action.payload
+      return action.payload.filter((item)=>item.checked);
     }
   }
 
