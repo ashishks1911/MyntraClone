@@ -11,6 +11,8 @@ const Bag = () => {
   // const { bagItems } = useOutletContext();
 
   const bagItems = useSelector((store) => store.bag);
+  const checkoutItems = useSelector((store) => store.checkoutItems);
+
   const [pincodeDialog, setPincodeDialog] = useState();
   if (bagItems.length == 0) {
     return <EmptyBag />
@@ -30,7 +32,7 @@ const Bag = () => {
         <div className="bulk-action flex justify-between md:p-5 pt-4 items-center">
           <div className="flex items-center">
             <input type="checkbox" name="item" id="item" className="w-4 h-4" defaultChecked />
-            <span className="uppercase font-bold md:text-md text-sm px-2"> {bagItems.length} /{bagItems.length} Items selected</span>
+            <span className="uppercase font-bold md:text-md text-sm px-2"> {checkoutItems.length} /{bagItems.length} Items selected</span>
           </div>
           <div>
             <button className="uppercase font-bold text-xs text-gray-500">Remove</button>

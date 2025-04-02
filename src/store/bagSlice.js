@@ -20,7 +20,10 @@ const bagSlice = createSlice({
 
     removeFromBag: (state, action) => {
       return state.filter((item) => (item.itemId !== action.payload.itemId) || (item.size !== action.payload.size));
+    },
 
+    isChecked : (state, action) => {
+      return state.map((item) => (item.itemId===action.payload.id && item.size=== action.payload.size ? {...item, checked:action.payload.checked} : item));
     }
 
   }

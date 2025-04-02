@@ -34,7 +34,7 @@ const WishListBagBtn = ({ itemId, size, setSize }) => {
       document.querySelector('.size-error-message').classList.remove('hidden');
 
     } else {
-      dispatch(bagActions.addToBag({itemId, size, qty}))
+      dispatch(bagActions.addToBag({ itemId, size, qty, checked: true }))
     }
     setSize('');
   }
