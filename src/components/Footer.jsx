@@ -1,4 +1,6 @@
 import React from 'react'
+import { FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaSquareFacebook, FaSquareInstagram } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -41,7 +43,7 @@ const Footer = () => {
             <p className="info-title">Experience myntra app on mobile</p>
             <div className="flex gap-1">
               <div>
-                <img src="/google-play-store.webp" alt="" className='w-full'/>
+                <img src="/google-play-store.webp" alt="" className='w-full' />
               </div>
               <div>
                 <img src="/app-store.png" alt="" />
@@ -49,11 +51,11 @@ const Footer = () => {
             </div>
           </div>
           <p className="info-title">Keep in touch</p>
-          <div className="socials">
-            <a href="#"><i className="fa-brands fa-square-facebook social"></i></a>
-            <a href="#"><i className="fa-brands fa-twitter social"></i></a>
-            <a href="#"><i className="fa-brands fa-youtube social"></i></a>
-            <a href="#"><i className="fa-brands fa-square-instagram social"></i></a>
+          <div className="flex gap-2 mb-3">
+            <a href="#"><FaSquareFacebook /></a>
+            <a href="#"><FaTwitter /></a>
+            <a href="#"><FaYoutube /></a>
+            <a href="#"><FaSquareInstagram /></a>
           </div>
         </div>
         <div className="myntra-promises md:block hidden">

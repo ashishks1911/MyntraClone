@@ -1,19 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaRegHeart } from 'react-icons/fa';
 import { IoPersonOutline } from 'react-icons/io5';
 import { HiBars3 } from "react-icons/hi2";
 import { SlBag } from 'react-icons/sl';
 import { Link } from 'react-router-dom';
 import { GoSearch } from "react-icons/go";
+import SideMenu from './SideMenu';
 
 const Header = () => {
+  const [showSideMenu, setShowSideMenu] = useState(false);
+
   return (
     <header className='z-40 sm:h-[80px] py-3'>
       <div className="logo-container flex items-center gap-3">
-        <div className='sm:hidden '>
+        <div className='sm:hidden ' onClick={() => setShowSideMenu(true)}>
           <HiBars3 className='w-7 h-7 text-gray-500' />
         </div>
         <Link to="/" ><img className="sm:h-[45px] h-6" src="/myntra.svg" alt="myntra logo" /></Link>
+        {<SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />}
       </div>
       <nav className="nav-bar hidden md:flex">
         <Link to="/category/men" >men</Link>

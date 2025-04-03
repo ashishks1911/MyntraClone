@@ -210,16 +210,6 @@ footer {
 }
 
 
-.socials {
-  display: flex;
-}
-
-.social {
-  font-size: 32px;
-  color: #696b79;
-  padding-right: 15px;
-}
-
 .copyright {
   text-align: center;
   font-size: 16px;
