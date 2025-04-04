@@ -20,7 +20,7 @@ const MobileCarousel = ({ images }) => {
       {
 
         images.map((img, index) => (
-          <SwiperSlide key={index}><img src={img} alt=""  className='rounded-xl min-h-[32rem]'/> </SwiperSlide>))
+          <SwiperSlide key={index}><img src={img} alt=""  className='rounded-xl min-h-[32rem] w-full'/> </SwiperSlide>))
       }
     </Swiper>
   )

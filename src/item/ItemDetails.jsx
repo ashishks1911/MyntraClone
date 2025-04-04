@@ -1,5 +1,5 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useLayoutEffect } from 'react'
+import { useLocation, useParams } from 'react-router-dom'
 import BreadCrumb from './BreadCrumb.jsx';
 import ImageContainer from './ImageContainer';
 import ItemInfo from './ItemInfoContainer';
@@ -8,9 +8,13 @@ import { useSelector } from 'react-redux';
 const ItemDetails = () => {
 
   const { itemId } = useParams();
-  const items = useSelector((store)=>store.items);
+  const items = useSelector((store) => store.items);
 
   const item = items.find((item) => item.id === itemId);
+  const { pathname } = useLocation();
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname])
 
   return (
     <div>

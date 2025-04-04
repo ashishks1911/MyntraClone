@@ -43,9 +43,9 @@ const SideMenu = ({ showSideMenu, setShowSideMenu }) => {
   const kidsCategories = [
     { id: 'Boys Clothing', types: ['T-Shirts', 'Shirts', 'Shorts', 'Jeans', 'Trousers', 'Clothing Sets', 'Ethnic Wear', 'Track pants & Pajamas', 'Jacket, Sweater & Sweatshirts', 'Party Wear', 'Innerwear & Thermals', 'Nightwear & Loungewear', 'Value Packs'] },
     { id: 'Girls Clothing', types: ['Dresses', 'Tops', 'Tshirts', 'Clothing Sets', 'Lehanga choli', 'Kurta Sets', 'Party Wear', 'Dangarees & Jumpsuits', 'Skirts & shorts', 'Tights & Leggings', 'Jeans, Trousers & Capris', 'Jacket, Sweater & Sweatshirts', 'Innerwear & Thermals', 'Nightwear & Loungewear', 'Value Packs'] },
-    { id: 'Footwear', types: ['Casual Shoes','Flipflops', 'Sports Shoes', 'Flats', 'Sandals', 'Heels', 'School Shoes', 'Socks'] },
+    { id: 'Footwear', types: ['Casual Shoes', 'Flipflops', 'Sports Shoes', 'Flats', 'Sandals', 'Heels', 'School Shoes', 'Socks'] },
     { id: 'Toys & Games', types: ['Learning & Development', 'Activity Toys', 'Soft Toys', 'Action Figure/ Play set'] },
-    { id: 'Infants', types: ['BodySuits', 'Rompers & Sleepsuits', 'Clothing Sets', 'Tshirts & Tops', 'Dresses', 'Bottom Wear', 'Winter Wear', 'Innerwear & Sleepwear', 'Infant Care' ] },
+    { id: 'Infants', types: ['BodySuits', 'Rompers & Sleepsuits', 'Clothing Sets', 'Tshirts & Tops', 'Dresses', 'Bottom Wear', 'Winter Wear', 'Innerwear & Sleepwear', 'Infant Care'] },
     { id: 'Home & Bath', types: [] },
     { id: 'Personal Care', types: [] },
     { id: 'Kids Accessories', types: ['Bags & Backpacks', 'Watches', 'Jwellery & Hair Accessories', 'Sunglasses', 'Mask & Protective Gears', 'Caps & Hats'] },
@@ -55,32 +55,32 @@ const SideMenu = ({ showSideMenu, setShowSideMenu }) => {
   ]
 
   const homeCategories = [
-    {id:'Bed Linen & Furnishing', types:[]},
-    {id:'Flooring', types:[]},
-    {id:'Bath', types:[]},
-    {id:'Lamps & Lighting', types:[]},
-    {id:'Home Decor', types:[]},
-    {id:'Cushion & cushion covers', types:[]},
-    {id:'Curtains', types:[]},
-    {id:'Home Gift Sets', types:[]},
-    {id:'Kitchen & Table', types:[]},
-    {id:'Storage', types:[]},
-    {id:'Brands', types:[]},
+    { id: 'Bed Linen & Furnishing', types: [] },
+    { id: 'Flooring', types: [] },
+    { id: 'Bath', types: [] },
+    { id: 'Lamps & Lighting', types: [] },
+    { id: 'Home Decor', types: [] },
+    { id: 'Cushion & cushion covers', types: [] },
+    { id: 'Curtains', types: [] },
+    { id: 'Home Gift Sets', types: [] },
+    { id: 'Kitchen & Table', types: [] },
+    { id: 'Storage', types: [] },
+    { id: 'Brands', types: [] },
   ];
 
   const beautyCategories = [
-    {id:'Makeup', types:[]},
-    {id:'Skincare, Bath & Body', types:[]},
-    {id:'Babycare', types:[]},
-    {id:'Masks', types:[]},
-    {id:'Haircare', types:[]},
-    {id:'Fragrances', types:[]},
-    {id:'Appliances', types:[]},
-    {id:`Men's Grooming`, types:[]},
-    {id:'Beauty Gift & Makeup Set', types:[]},
-    {id:'Premium Beauty', types:[]},
-    {id:'Wellness & Hygiene', types:[]},
-    {id:'Top Brands', types:[]},
+    { id: 'Makeup', types: [] },
+    { id: 'Skincare, Bath & Body', types: [] },
+    { id: 'Babycare', types: [] },
+    { id: 'Masks', types: [] },
+    { id: 'Haircare', types: [] },
+    { id: 'Fragrances', types: [] },
+    { id: 'Appliances', types: [] },
+    { id: `Men's Grooming`, types: [] },
+    { id: 'Beauty Gift & Makeup Set', types: [] },
+    { id: 'Premium Beauty', types: [] },
+    { id: 'Wellness & Hygiene', types: [] },
+    { id: 'Top Brands', types: [] },
 
   ]
 
@@ -93,7 +93,7 @@ const SideMenu = ({ showSideMenu, setShowSideMenu }) => {
             <BsFillPersonLinesFill className='w-8 h-8 text-black' />
           </div>
           <div className='cursor-pointer' onClick={() => setShowSideMenu(false)}>
-            <svg width="24" height="24" viewBox="0 0 24 24" class="close-icon" fill="#ffffff"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z" opacity="0.05"></path><path fill="#ffffff" d="M12.967 12L19.3 5.666a.685.685 0 000-.967.686.686 0 00-.967 0L12 11.033 5.666 4.7a.686.686 0 00-.967 0 .685.685 0 000 .967L11.033 12 4.7 18.334a.685.685 0 000 .967.686.686 0 00.967 0L12 12.967l6.334 6.334a.686.686 0 00.967 0 .685.685 0 000-.967L12.967 12z"></path></g></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" className="close-icon" fill="#ffffff"><g fill="none" fillRule="evenodd"><path d="M0 0h24v24H0z" opacity="0.05"></path><path fill="#ffffff" d="M12.967 12L19.3 5.666a.685.685 0 000-.967.686.686 0 00-.967 0L12 11.033 5.666 4.7a.686.686 0 00-.967 0 .685.685 0 000 .967L11.033 12 4.7 18.334a.685.685 0 000 .967.686.686 0 00.967 0L12 12.967l6.334 6.334a.686.686 0 00.967 0 .685.685 0 000-.967L12.967 12z"></path></g></svg>
           </div>
         </div>
         <div className='p-4'>
@@ -108,66 +108,66 @@ const SideMenu = ({ showSideMenu, setShowSideMenu }) => {
       <div className='side-menu-navigation'>
         <Parent title='Men'>
           {
-            menCategories.map((item) => (
-              item.types.length !== 0 ? <Parent title={item.id}>
+            menCategories.map((item, index) => (
+              item.types.length !== 0 ? <Parent key={index} title={item.id}>
                 {
-                  item.types.map((category) => (
-                    <Child title={category}></Child>
+                  item.types.map((category, index) => (
+                    <Child title={category} key={index}></Child>
                   ))
                 }
-              </Parent> : <Child title={item.id}></Child>
+              </Parent> : <Child title={item.id} key={index}></Child>
             ))
           }
         </Parent>
         <Parent title='Women'>
           {
-            womenCategories.map((item) => (
-              item.types.length !== 0 ? <Parent title={item.id}>
+            womenCategories.map((item, index) => (
+              item.types.length !== 0 ? <Parent key={index} title={item.id}>
                 {
-                  item.types.map((category) => (
-                    <Child title={category}></Child>
+                  item.types.map((category, index) => (
+                    <Child title={category} key={index}></Child>
                   ))
                 }
-              </Parent> : <Child title={item.id}></Child>
+              </Parent> : <Child title={item.id} key={index}></Child>
             ))
           }
         </Parent>
         <Parent title='Kids'>
           {
-            kidsCategories.map((item) => (
-              item.types.length !== 0 ? <Parent title={item.id}>
+            kidsCategories.map((item, index) => (
+              item.types.length !== 0 ? <Parent key={index} title={item.id}>
                 {
-                  item.types.map((category) => (
-                    <Child title={category}></Child>
+                  item.types.map((category, index) => (
+                    <Child title={category} key={index}></Child>
                   ))
                 }
-              </Parent> : <Child title={item.id}></Child>
+              </Parent> : <Child title={item.id} key={index}></Child>
             ))
           }
         </Parent>
         <Parent title='Home & Living'>
           {
-            homeCategories.map((item) => (
-              item.types.length !== 0 ? <Parent title={item.id}>
+            homeCategories.map((item, index) => (
+              item.types.length !== 0 ? <Parent key={index} title={item.id}>
                 {
-                  item.types.map((category) => (
-                    <Child title={category}></Child>
+                  item.types.map((category, index) => (
+                    <Child title={category} key={index}></Child>
                   ))
                 }
-              </Parent> : <Child title={item.id}></Child>
+              </Parent> : <Child title={item.id} key={index}></Child>
             ))
           }
         </Parent>
         <Parent title='Beauty'>
           {
-            beautyCategories.map((item) => (
-              item.types.length !== 0 ? <Parent title={item.id}>
+            beautyCategories.map((item, index) => (
+              item.types.length !== 0 ? <Parent key={index} title={item.id}>
                 {
-                  item.types.map((category) => (
-                    <Child title={category}></Child>
+                  item.types.map((category, index) => (
+                    <Child title={category} key={index}></Child>
                   ))
                 }
-              </Parent> : <Child title={item.id}></Child>
+              </Parent> : <Child title={item.id} key={index}></Child>
             ))
           }
         </Parent>
